@@ -49,10 +49,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mantenimientos\crpEstadoFinancieroBalance.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpEstadoFinancieroBalance.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Mantenimientos\crpEstadoFlujoResultado.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>crpEstadoFlujoResultado.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\crpLibroBalance.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpLibroBalance.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Mantenimientos\crpLibroDiario.cs">
@@ -83,9 +95,17 @@
     <Content Include="Íconos\Guardar.png" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Mantenimientos\crpEstadoFinancieroBalance.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpEstadoFinancieroBalance.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\crpEstadoFlujoResultado.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crpEstadoFlujoResultado.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\crpLibroBalance.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpLibroBalance.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\crpLibroDiario.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
