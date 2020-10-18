@@ -16,5 +16,17 @@ namespace CapaVista.Mantenimientos
         {
             InitializeComponent();
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            if (txtNombreCuenta.Text.ToString() != "")
+            {
+
+            }
+            else
+            {
+                MessageBox.Show("Debe de ingresar un número de cuenta contable");
+            }
+        }
     }
 }

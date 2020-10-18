@@ -34,6 +34,9 @@
     <Reference Include="CapaControlador">
       <HintPath>..\CapaControlador\bin\Debug\CapaControlador.dll</HintPath>
     </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -46,11 +49,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Mantenimientos\CuentasContables.cs">
+    <Compile Include="Mantenimientos\crpLibroDiario.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpLibroDiario.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frmCuentasContables.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mantenimientos\CuentasContables.Designer.cs">
-      <DependentUpon>CuentasContables.cs</DependentUpon>
+    <Compile Include="Mantenimientos\.Designer.cs">
+      <DependentUpon>frmCuentasContables.cs</DependentUpon>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -60,6 +70,18 @@
   <ItemGroup>
     <Content Include="Imágenes\diario.png" />
     <Content Include="Íconos\Guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mantenimientos\crpLibroDiario.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpLibroDiario.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frmCuentasContables.resx">
+      <DependentUpon>frmCuentasContables.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
