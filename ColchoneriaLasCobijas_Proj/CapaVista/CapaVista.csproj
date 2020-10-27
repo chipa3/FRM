@@ -111,9 +111,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Botones\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Imágenes\diario.png" />
     <Content Include="Íconos\Guardar.png" />

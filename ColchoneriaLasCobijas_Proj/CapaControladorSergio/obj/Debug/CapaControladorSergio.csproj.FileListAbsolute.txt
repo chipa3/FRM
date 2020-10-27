@@ -1,0 +1,9 @@
+C:\Users\bryan\Desktop\FRM\ColchoneriaLasCobijas_Proj\CapaControladorSergio\bin\Debug\CapaControladorSergio.dll
+C:\Users\bryan\Desktop\FRM\ColchoneriaLasCobijas_Proj\CapaControladorSergio\bin\Debug\CapaControladorSergio.pdb
+C:\Users\bryan\Desktop\FRM\ColchoneriaLasCobijas_Proj\CapaControladorSergio\obj\Debug\CapaControladorSergio.csproj.CoreCompileInputs.cache
+C:\Users\bryan\Desktop\FRM\ColchoneriaLasCobijas_Proj\CapaControladorSergio\obj\Debug\CapaControladorSergio.dll
+C:\Users\bryan\Desktop\FRM\ColchoneriaLasCobijas_Proj\CapaControladorSergio\obj\Debug\CapaControladorSergio.pdb
+C:\Users\bryan\Desktop\FRM\ColchoneriaLasCobijas_Proj\CapaControladorSergio\bin\Debug\CapaModeloSergio.dll
+C:\Users\bryan\Desktop\FRM\ColchoneriaLasCobijas_Proj\CapaControladorSergio\bin\Debug\CapaModeloSergio.pdb
+C:\Users\bryan\Desktop\FRM\ColchoneriaLasCobijas_Proj\CapaControladorSergio\obj\Debug\CapaControladorSergio.csprojAssemblyReference.cache
+C:\Users\bryan\Desktop\FRM\ColchoneriaLasCobijas_Proj\CapaControladorSergio\obj\Debug\CapaControladorSergio.csproj.CopyComplete
