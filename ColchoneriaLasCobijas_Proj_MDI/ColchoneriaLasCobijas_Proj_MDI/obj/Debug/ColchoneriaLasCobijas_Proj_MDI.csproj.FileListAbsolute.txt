@@ -1,0 +1,10 @@
+C:\Users\bryan\Desktop\FRM\ColchoneriaLasCobijas_Proj_MDI\ColchoneriaLasCobijas_Proj_MDI\obj\Debug\ColchoneriaLasCobijas_Proj_MDI.csprojAssemblyReference.cache
+C:\Users\bryan\Desktop\FRM\ColchoneriaLasCobijas_Proj_MDI\ColchoneriaLasCobijas_Proj_MDI\obj\Debug\ColchoneriaLasCobijas_Proj_MDI.MDIFRM.resources
+C:\Users\bryan\Desktop\FRM\ColchoneriaLasCobijas_Proj_MDI\ColchoneriaLasCobijas_Proj_MDI\obj\Debug\ColchoneriaLasCobijas_Proj_MDI.Properties.Resources.resources
+C:\Users\bryan\Desktop\FRM\ColchoneriaLasCobijas_Proj_MDI\ColchoneriaLasCobijas_Proj_MDI\obj\Debug\ColchoneriaLasCobijas_Proj_MDI.csproj.GenerateResource.cache
+C:\Users\bryan\Desktop\FRM\ColchoneriaLasCobijas_Proj_MDI\ColchoneriaLasCobijas_Proj_MDI\obj\Debug\ColchoneriaLasCobijas_Proj_MDI.csproj.CoreCompileInputs.cache
+C:\Users\bryan\Desktop\FRM\ColchoneriaLasCobijas_Proj_MDI\ColchoneriaLasCobijas_Proj_MDI\bin\Debug\ColchoneriaLasCobijas_Proj_MDI.exe.config
+C:\Users\bryan\Desktop\FRM\ColchoneriaLasCobijas_Proj_MDI\ColchoneriaLasCobijas_Proj_MDI\bin\Debug\ColchoneriaLasCobijas_Proj_MDI.exe
+C:\Users\bryan\Desktop\FRM\ColchoneriaLasCobijas_Proj_MDI\ColchoneriaLasCobijas_Proj_MDI\bin\Debug\ColchoneriaLasCobijas_Proj_MDI.pdb
+C:\Users\bryan\Desktop\FRM\ColchoneriaLasCobijas_Proj_MDI\ColchoneriaLasCobijas_Proj_MDI\obj\Debug\ColchoneriaLasCobijas_Proj_MDI.exe
+C:\Users\bryan\Desktop\FRM\ColchoneriaLasCobijas_Proj_MDI\ColchoneriaLasCobijas_Proj_MDI\obj\Debug\ColchoneriaLasCobijas_Proj_MDI.pdb
