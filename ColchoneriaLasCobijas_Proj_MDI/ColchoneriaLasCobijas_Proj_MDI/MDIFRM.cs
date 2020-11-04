@@ -99,7 +99,6 @@ namespace ColchoneriaLasCobijas_Proj_MDI
         private void cuentasContablesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CapaVistaBryan.Mantenimientos.frmCuentas Cuentas = new CapaVistaBryan.Mantenimientos.frmCuentas();
-            //Cuentas.Show();
             Cuentas.MdiParent = this;
             Cuentas.Show();
         }

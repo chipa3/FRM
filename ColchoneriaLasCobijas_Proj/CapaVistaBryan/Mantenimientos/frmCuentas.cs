@@ -108,6 +108,10 @@ namespace CapaVistaBryan.Mantenimientos
                 }else if(cmbTipoCuenta.SelectedIndex==0){
                     MessageBox.Show("Debe de seleccionar el tipo de cuenta contable", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
+                }else if (txtNombreCuenta.Text.Length > 75)
+                {
+                    MessageBox.Show("El nombre no puede tener mas de 75 caracteres", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
                 //Crea un nodo nuevo con el texto introducido
                 TreeNode ANode = new TreeNode(txtNombreCuenta.Text.Trim());
@@ -217,5 +221,6 @@ namespace CapaVistaBryan.Mantenimientos
         {
             Help.ShowHelp(this, "AyudaBryan/AyudaBryan.chm", "CuentasContables.html");
         }
+
     }
 }

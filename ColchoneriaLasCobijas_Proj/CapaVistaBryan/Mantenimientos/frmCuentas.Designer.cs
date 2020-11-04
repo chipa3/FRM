@@ -90,6 +90,7 @@
             // 
             // cmbTipoCuenta
             // 
+            this.cmbTipoCuenta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoCuenta.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTipoCuenta.FormattingEnabled = true;
             this.cmbTipoCuenta.Location = new System.Drawing.Point(267, 101);
