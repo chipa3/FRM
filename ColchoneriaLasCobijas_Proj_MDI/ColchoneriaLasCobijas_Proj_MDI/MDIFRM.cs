@@ -95,5 +95,12 @@ namespace ColchoneriaLasCobijas_Proj_MDI
                 childForm.Close();
             }
         }
+
+        private void cuentasContablesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CapaVistaBryan.Mantenimientos.frmCuentas Cuentas = new CapaVistaBryan.Mantenimientos.frmCuentas();
+            Cuentas.MdiParent = this;
+            Cuentas.Show();
+        }
     }
 }

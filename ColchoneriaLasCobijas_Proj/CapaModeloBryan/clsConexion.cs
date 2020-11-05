@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CapaModelo
+namespace CapaModeloBryan
 {
-    public class Conexion
+    public class clsConexion
     {
         public OdbcConnection conexion()
         {
