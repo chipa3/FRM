@@ -1,4 +1,4 @@
-﻿namespace CapaVista.Mantenimientos
+﻿namespace CapaVistaJose.Mantenimientos
 {
     partial class frmCuentaBancaria
     {
@@ -28,176 +28,284 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.cmbMoneda = new System.Windows.Forms.ComboBox();
+            this.cmbPropietario = new System.Windows.Forms.ComboBox();
+            this.cmbBanco = new System.Windows.Forms.ComboBox();
+            this.dvgDatos = new System.Windows.Forms.DataGridView();
+            this.lblEstado = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.lblSaldo = new System.Windows.Forms.Label();
+            this.lblMoneda = new System.Windows.Forms.Label();
+            this.lblPropietario = new System.Windows.Forms.Label();
+            this.lblBanco = new System.Windows.Forms.Label();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.txtSueldo = new System.Windows.Forms.TextBox();
+            this.cmbCodigoMoneda = new System.Windows.Forms.ComboBox();
+            this.cmbCodigoPropietario = new System.Windows.Forms.ComboBox();
+            this.cmbCodigoBanco = new System.Windows.Forms.ComboBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.navegador1 = new CapaVistaNavegador.Navegador();
+            this.txtEstado = new System.Windows.Forms.TextBox();
+            this.rbEstadoActivo = new System.Windows.Forms.RadioButton();
+            this.rbEstadoInactivo = new System.Windows.Forms.RadioButton();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgDatos)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox5
+            // cmbMoneda
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(161, 303);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(252, 24);
-            this.comboBox5.TabIndex = 29;
+            this.cmbMoneda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMoneda.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMoneda.FormattingEnabled = true;
+            this.cmbMoneda.Location = new System.Drawing.Point(215, 285);
+            this.cmbMoneda.Name = "cmbMoneda";
+            this.cmbMoneda.Size = new System.Drawing.Size(282, 30);
+            this.cmbMoneda.TabIndex = 55;
+            this.cmbMoneda.SelectedIndexChanged += new System.EventHandler(this.cmbMoneda_SelectedIndexChanged);
             // 
-            // comboBox4
+            // cmbPropietario
             // 
-            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(419, 261);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(81, 24);
-            this.comboBox4.TabIndex = 28;
+            this.cmbPropietario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPropietario.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPropietario.FormattingEnabled = true;
+            this.cmbPropietario.Location = new System.Drawing.Point(215, 240);
+            this.cmbPropietario.Name = "cmbPropietario";
+            this.cmbPropietario.Size = new System.Drawing.Size(282, 30);
+            this.cmbPropietario.TabIndex = 54;
+            this.cmbPropietario.SelectedIndexChanged += new System.EventHandler(this.cmbPropietario_SelectedIndexChanged);
             // 
-            // comboBox3
+            // cmbBanco
             // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(161, 261);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(252, 24);
-            this.comboBox3.TabIndex = 27;
+            this.cmbBanco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBanco.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbBanco.FormattingEnabled = true;
+            this.cmbBanco.Location = new System.Drawing.Point(215, 199);
+            this.cmbBanco.Name = "cmbBanco";
+            this.cmbBanco.Size = new System.Drawing.Size(282, 30);
+            this.cmbBanco.TabIndex = 53;
+            this.cmbBanco.SelectedIndexChanged += new System.EventHandler(this.cmbBanco_SelectedIndexChanged);
             // 
-            // comboBox2
+            // dvgDatos
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(419, 222);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(81, 24);
-            this.comboBox2.TabIndex = 26;
+            this.dvgDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgDatos.Location = new System.Drawing.Point(619, 156);
+            this.dvgDatos.Name = "dvgDatos";
+            this.dvgDatos.RowHeadersWidth = 51;
+            this.dvgDatos.RowTemplate.Height = 24;
+            this.dvgDatos.Size = new System.Drawing.Size(812, 270);
+            this.dvgDatos.TabIndex = 52;
             // 
-            // comboBox1
+            // lblEstado
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(161, 222);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(252, 24);
-            this.comboBox1.TabIndex = 25;
+            this.lblEstado.AutoSize = true;
+            this.lblEstado.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstado.Location = new System.Drawing.Point(12, 387);
+            this.lblEstado.Name = "lblEstado";
+            this.lblEstado.Size = new System.Drawing.Size(90, 22);
+            this.lblEstado.TabIndex = 51;
+            this.lblEstado.Text = "ESTADO";
             // 
-            // label5
+            // lblFecha
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(39, 301);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 22);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "Estado";
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.Location = new System.Drawing.Point(12, 439);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(183, 22);
+            this.lblFecha.TabIndex = 50;
+            this.lblFecha.Text = "FECHA APERTURA";
             // 
-            // label4
+            // lblSaldo
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(39, 261);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 22);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "Propietario";
+            this.lblSaldo.AutoSize = true;
+            this.lblSaldo.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSaldo.Location = new System.Drawing.Point(12, 335);
+            this.lblSaldo.Name = "lblSaldo";
+            this.lblSaldo.Size = new System.Drawing.Size(76, 22);
+            this.lblSaldo.TabIndex = 49;
+            this.lblSaldo.Text = "SALDO";
             // 
-            // label3
+            // lblMoneda
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(37, 222);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 22);
-            this.label3.TabIndex = 22;
-            this.label3.Text = "Banco";
+            this.lblMoneda.AutoSize = true;
+            this.lblMoneda.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMoneda.Location = new System.Drawing.Point(12, 285);
+            this.lblMoneda.Name = "lblMoneda";
+            this.lblMoneda.Size = new System.Drawing.Size(100, 22);
+            this.lblMoneda.TabIndex = 48;
+            this.lblMoneda.Text = "MONEDA";
             // 
-            // label2
+            // lblPropietario
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(37, 184);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 22);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "No. Cuenta";
+            this.lblPropietario.AutoSize = true;
+            this.lblPropietario.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPropietario.Location = new System.Drawing.Point(12, 237);
+            this.lblPropietario.Name = "lblPropietario";
+            this.lblPropietario.Size = new System.Drawing.Size(138, 22);
+            this.lblPropietario.TabIndex = 47;
+            this.lblPropietario.Text = "PROPIETARIO";
             // 
-            // label1
+            // lblBanco
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(37, 147);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 22);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Codigo";
+            this.lblBanco.AutoSize = true;
+            this.lblBanco.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBanco.Location = new System.Drawing.Point(12, 196);
+            this.lblBanco.Name = "lblBanco";
+            this.lblBanco.Size = new System.Drawing.Size(81, 22);
+            this.lblBanco.TabIndex = 46;
+            this.lblBanco.Text = "BANCO";
             // 
-            // textBox2
+            // lblCodigo
             // 
-            this.textBox2.Location = new System.Drawing.Point(161, 181);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(252, 22);
-            this.textBox2.TabIndex = 19;
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigo.Location = new System.Drawing.Point(12, 159);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(94, 22);
+            this.lblCodigo.TabIndex = 45;
+            this.lblCodigo.Text = "CODIGO";
             // 
-            // textBox1
+            // dtpFecha
             // 
-            this.textBox1.Location = new System.Drawing.Point(161, 144);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(252, 22);
-            this.textBox1.TabIndex = 18;
+            this.dtpFecha.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFecha.Location = new System.Drawing.Point(261, 439);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(442, 31);
+            this.dtpFecha.TabIndex = 43;
+            this.dtpFecha.Tag = "fecha_apertura_cuenta_bancaria";
             // 
-            // dataGridView2
+            // txtSueldo
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(506, 144);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(489, 231);
-            this.dataGridView2.TabIndex = 17;
+            this.txtSueldo.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSueldo.Location = new System.Drawing.Point(215, 332);
+            this.txtSueldo.Name = "txtSueldo";
+            this.txtSueldo.Size = new System.Drawing.Size(282, 31);
+            this.txtSueldo.TabIndex = 42;
+            this.txtSueldo.Tag = "saldo_cuenta_bancaria";
+            this.txtSueldo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSueldo_KeyPress);
             // 
-            // dataGridView1
+            // cmbCodigoMoneda
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(27, 19);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(968, 97);
-            this.dataGridView1.TabIndex = 16;
+            this.cmbCodigoMoneda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCodigoMoneda.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCodigoMoneda.FormattingEnabled = true;
+            this.cmbCodigoMoneda.Location = new System.Drawing.Point(506, 282);
+            this.cmbCodigoMoneda.Name = "cmbCodigoMoneda";
+            this.cmbCodigoMoneda.Size = new System.Drawing.Size(61, 30);
+            this.cmbCodigoMoneda.TabIndex = 41;
+            this.cmbCodigoMoneda.Tag = "fk_id_tipo_moneda";
+            this.cmbCodigoMoneda.SelectedIndexChanged += new System.EventHandler(this.cmbCodigoMoneda_SelectedIndexChanged);
+            // 
+            // cmbCodigoPropietario
+            // 
+            this.cmbCodigoPropietario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCodigoPropietario.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCodigoPropietario.FormattingEnabled = true;
+            this.cmbCodigoPropietario.Location = new System.Drawing.Point(506, 237);
+            this.cmbCodigoPropietario.Name = "cmbCodigoPropietario";
+            this.cmbCodigoPropietario.Size = new System.Drawing.Size(61, 30);
+            this.cmbCodigoPropietario.TabIndex = 40;
+            this.cmbCodigoPropietario.Tag = "fk_id_propietario";
+            this.cmbCodigoPropietario.SelectedIndexChanged += new System.EventHandler(this.cmbCodigoPropietario_SelectedIndexChanged);
+            // 
+            // cmbCodigoBanco
+            // 
+            this.cmbCodigoBanco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCodigoBanco.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCodigoBanco.FormattingEnabled = true;
+            this.cmbCodigoBanco.Location = new System.Drawing.Point(506, 201);
+            this.cmbCodigoBanco.Name = "cmbCodigoBanco";
+            this.cmbCodigoBanco.Size = new System.Drawing.Size(61, 30);
+            this.cmbCodigoBanco.TabIndex = 39;
+            this.cmbCodigoBanco.Tag = "fk_id_banco";
+            this.cmbCodigoBanco.SelectedIndexChanged += new System.EventHandler(this.cmbCodigoBanco_SelectedIndexChanged);
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigo.Location = new System.Drawing.Point(215, 156);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(110, 31);
+            this.txtCodigo.TabIndex = 38;
+            this.txtCodigo.Tag = "pk_id_numero_cuenta_bancaria";
+            // 
+            // navegador1
+            // 
+            this.navegador1.BackColor = System.Drawing.Color.Transparent;
+            this.navegador1.Location = new System.Drawing.Point(19, 20);
+            this.navegador1.Margin = new System.Windows.Forms.Padding(4);
+            this.navegador1.Name = "navegador1";
+            this.navegador1.Size = new System.Drawing.Size(1412, 129);
+            this.navegador1.TabIndex = 37;
+            this.navegador1.Load += new System.EventHandler(this.navegador1_Load);
+            // 
+            // txtEstado
+            // 
+            this.txtEstado.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstado.Location = new System.Drawing.Point(709, 439);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(65, 31);
+            this.txtEstado.TabIndex = 56;
+            this.txtEstado.Tag = "estado_apertura_cuenta_bancaria";
+            this.txtEstado.Visible = false;
+            this.txtEstado.TextChanged += new System.EventHandler(this.txtEstado_TextChanged);
+            // 
+            // rbEstadoActivo
+            // 
+            this.rbEstadoActivo.AutoSize = true;
+            this.rbEstadoActivo.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbEstadoActivo.Location = new System.Drawing.Point(215, 387);
+            this.rbEstadoActivo.Name = "rbEstadoActivo";
+            this.rbEstadoActivo.Size = new System.Drawing.Size(89, 26);
+            this.rbEstadoActivo.TabIndex = 57;
+            this.rbEstadoActivo.TabStop = true;
+            this.rbEstadoActivo.Text = "Activo";
+            this.rbEstadoActivo.UseVisualStyleBackColor = true;
+            this.rbEstadoActivo.CheckedChanged += new System.EventHandler(this.rbEstadoActivo_CheckedChanged);
+            // 
+            // rbEstadoInactivo
+            // 
+            this.rbEstadoInactivo.AutoSize = true;
+            this.rbEstadoInactivo.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbEstadoInactivo.Location = new System.Drawing.Point(339, 387);
+            this.rbEstadoInactivo.Name = "rbEstadoInactivo";
+            this.rbEstadoInactivo.Size = new System.Drawing.Size(103, 26);
+            this.rbEstadoInactivo.TabIndex = 58;
+            this.rbEstadoInactivo.TabStop = true;
+            this.rbEstadoInactivo.Text = "Inactivo";
+            this.rbEstadoInactivo.UseVisualStyleBackColor = true;
+            this.rbEstadoInactivo.CheckedChanged += new System.EventHandler(this.rbEstadoInactivo_CheckedChanged);
             // 
             // frmCuentaBancaria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gold;
-            this.ClientSize = new System.Drawing.Size(1047, 423);
-            this.Controls.Add(this.comboBox5);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(1450, 482);
+            this.Controls.Add(this.rbEstadoInactivo);
+            this.Controls.Add(this.rbEstadoActivo);
+            this.Controls.Add(this.txtEstado);
+            this.Controls.Add(this.cmbMoneda);
+            this.Controls.Add(this.cmbPropietario);
+            this.Controls.Add(this.cmbBanco);
+            this.Controls.Add(this.dvgDatos);
+            this.Controls.Add(this.lblEstado);
+            this.Controls.Add(this.lblFecha);
+            this.Controls.Add(this.lblSaldo);
+            this.Controls.Add(this.lblMoneda);
+            this.Controls.Add(this.lblPropietario);
+            this.Controls.Add(this.lblBanco);
+            this.Controls.Add(this.lblCodigo);
+            this.Controls.Add(this.dtpFecha);
+            this.Controls.Add(this.txtSueldo);
+            this.Controls.Add(this.cmbCodigoMoneda);
+            this.Controls.Add(this.cmbCodigoPropietario);
+            this.Controls.Add(this.cmbCodigoBanco);
+            this.Controls.Add(this.txtCodigo);
+            this.Controls.Add(this.navegador1);
             this.Name = "frmCuentaBancaria";
-            this.Text = "frmCuentaBancaria";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Text = "Mantenimiento - Cuenta Bancaria - 1305";
+            ((System.ComponentModel.ISupportInitialize)(this.dvgDatos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,19 +313,26 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox cmbMoneda;
+        private System.Windows.Forms.ComboBox cmbPropietario;
+        private System.Windows.Forms.ComboBox cmbBanco;
+        private System.Windows.Forms.DataGridView dvgDatos;
+        private System.Windows.Forms.Label lblEstado;
+        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Label lblSaldo;
+        private System.Windows.Forms.Label lblMoneda;
+        private System.Windows.Forms.Label lblPropietario;
+        private System.Windows.Forms.Label lblBanco;
+        private System.Windows.Forms.Label lblCodigo;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
+        private System.Windows.Forms.TextBox txtSueldo;
+        private System.Windows.Forms.ComboBox cmbCodigoMoneda;
+        private System.Windows.Forms.ComboBox cmbCodigoPropietario;
+        private System.Windows.Forms.ComboBox cmbCodigoBanco;
+        private System.Windows.Forms.TextBox txtCodigo;
+        private CapaVistaNavegador.Navegador navegador1;
+        private System.Windows.Forms.TextBox txtEstado;
+        private System.Windows.Forms.RadioButton rbEstadoActivo;
+        private System.Windows.Forms.RadioButton rbEstadoInactivo;
     }
 }

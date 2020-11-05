@@ -36,6 +36,12 @@
     <Reference Include="CapaVistaBryan">
       <HintPath>..\..\ColchoneriaLasCobijas_Proj\CapaVistaBryan\bin\Debug\CapaVistaBryan.dll</HintPath>
     </Reference>
+    <Reference Include="CapaVistaJose">
+      <HintPath>..\..\ColchoneriaLasCobijas_Proj\CapaVistaJose\bin\Debug\CapaVistaJose.dll</HintPath>
+    </Reference>
+    <Reference Include="CapaVistaSeguridad">
+      <HintPath>..\..\ColchoneriaLasCobijas_Proj\Navegador-main\Navegador\ObjetoSeguridad\CapaVistaSeguridad\bin\Debug\CapaVistaSeguridad.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
