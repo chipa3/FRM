@@ -61,6 +61,7 @@
             this.disponibilidadDiariaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.transaccionesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -307,6 +308,8 @@
             // 
             // ayudaToolStripMenuItem
             // 
+            this.ayudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.transaccionesToolStripMenuItem1});
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
             this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
@@ -319,6 +322,13 @@
             this.textBox1.Size = new System.Drawing.Size(132, 22);
             this.textBox1.TabIndex = 2;
             this.textBox1.Visible = false;
+            // 
+            // transaccionesToolStripMenuItem1
+            // 
+            this.transaccionesToolStripMenuItem1.Name = "transaccionesToolStripMenuItem1";
+            this.transaccionesToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.transaccionesToolStripMenuItem1.Text = "Transacciones";
+            this.transaccionesToolStripMenuItem1.Click += new System.EventHandler(this.transaccionesToolStripMenuItem1_Click);
             // 
             // MDIFRM
             // 
@@ -375,6 +385,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ToolStripMenuItem opcionesDeSesionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem opcionesDeSeguridadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem transaccionesToolStripMenuItem1;
     }
 }
 

@@ -251,5 +251,10 @@ namespace ColchoneriaLasCobijas_Proj_MDI
                 MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
             }
         }
+
+        private void transaccionesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "AyudaBancos/AyudaBancos.chm", "Transacciones.html");
+        }
     }
 }
