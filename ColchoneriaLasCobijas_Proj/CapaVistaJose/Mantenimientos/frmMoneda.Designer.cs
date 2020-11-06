@@ -210,6 +210,8 @@
             this.Controls.Add(this.txtMoneda);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.navegador1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmMoneda";
             this.Text = "Mantenimientos-Tipo De Moneda-1303";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();

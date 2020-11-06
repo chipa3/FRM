@@ -88,6 +88,7 @@
             // dvgDatos
             // 
             this.dvgDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgDatos.Enabled = false;
             this.dvgDatos.Location = new System.Drawing.Point(619, 156);
             this.dvgDatos.Name = "dvgDatos";
             this.dvgDatos.RowHeadersWidth = 51;
@@ -303,6 +304,8 @@
             this.Controls.Add(this.cmbCodigoBanco);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.navegador1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmCuentaBancaria";
             this.Text = "Mantenimiento - Cuenta Bancaria - 1305";
             ((System.ComponentModel.ISupportInitialize)(this.dvgDatos)).EndInit();

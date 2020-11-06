@@ -148,7 +148,7 @@
             this.rbEstadoInactivo.UseVisualStyleBackColor = true;
             this.rbEstadoInactivo.CheckedChanged += new System.EventHandler(this.rbEstadoInactivo_CheckedChanged);
             // 
-            // Mantenimientos___Bancos___1302
+            // MantenimientosBancos1302
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -164,7 +164,9 @@
             this.Controls.Add(this.txtBanco);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.navegador1);
-            this.Name = "Mantenimientos___Bancos___1302";
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "MantenimientosBancos1302";
             this.Text = "Mantenimientos-Bancos-1302";
             ((System.ComponentModel.ISupportInitialize)(this.dvgDatos)).EndInit();
             this.ResumeLayout(false);

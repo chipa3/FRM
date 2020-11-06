@@ -188,6 +188,8 @@
             this.Controls.Add(this.txtTransaccion);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.navegador1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmTipoMovimientoBancario";
             this.Text = "Mantenimiento - Tipo De Movimiento Bancario - 1304";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();

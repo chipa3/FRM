@@ -188,6 +188,8 @@
             this.Controls.Add(this.txtPropietario);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.navegador1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmPropietario";
             this.Text = "Mantenimiento - Propietario de Cuenta Bancaria- 1306";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();

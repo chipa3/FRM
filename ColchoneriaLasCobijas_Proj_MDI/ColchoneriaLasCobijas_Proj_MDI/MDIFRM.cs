@@ -211,5 +211,45 @@ namespace ColchoneriaLasCobijas_Proj_MDI
                 MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
             }
         }
+
+        private void transaccionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            clsVistaBitacora bit = new clsVistaBitacora();
+            clsFuncionesSeguridad seguridad = new clsFuncionesSeguridad();
+
+            if (seguridad.PermisosAcceso("1307", textBox1.Text) == 1)
+            {
+
+                bit.user(textBox1.Text);
+       
+                frmTransacciones variable = new frmTransacciones();
+                variable.MdiParent = this;
+                variable.Show();
+            }
+            else
+            {
+                MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
+            }
+        }
+
+        private void disponibilidadDiariaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            clsVistaBitacora bit = new clsVistaBitacora();
+            clsFuncionesSeguridad seguridad = new clsFuncionesSeguridad();
+
+            if (seguridad.PermisosAcceso("1308", textBox1.Text) == 1)
+            {
+
+                bit.user(textBox1.Text);
+
+                frmDisponibilidadDiaria variable = new frmDisponibilidadDiaria();
+                variable.MdiParent = this;
+                variable.Show();
+            }
+            else
+            {
+                MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
+            }
+        }
     }
 }
