@@ -93,6 +93,12 @@ namespace CapaVistaJose.Mantenimientos
         {
             ClsValidaciones Validar = new ClsValidaciones();
             Validar.funcSoloLetras(e);
+            if (txtBanco.Text.Length > 40)
+            {
+                MessageBox.Show("No puede ingresar mas de 40 Caracteres", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);  
+                txtBanco.Text = "";
+            }
+          
         }
     }
 }

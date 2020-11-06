@@ -146,6 +146,12 @@ namespace CapaVistaJose.Mantenimientos
         {
             ClsValidaciones validar = new ClsValidaciones();
             validar.funcSueldo(e);
+
+            if(txtSueldo.Text.Length > 20)
+            {
+                MessageBox.Show("No puede ingresar mas de 20 Caracteres", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtSueldo.Text = "";
+            }
         }
 
         private void cmbBanco_SelectedIndexChanged(object sender, EventArgs e)

@@ -98,6 +98,21 @@ namespace CapaVistaJose.Mantenimientos
         {
             ClsValidaciones validar = new ClsValidaciones();
             validar.funcSoloLetras(e);
+
+            if (txtTransaccion.Text.Length > 45)
+            {
+                MessageBox.Show("No puede ingresar mas de 45 Caracteres", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtTransaccion.Text = "";
+            }
+        }
+
+        private void txtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (txtDescripcion.Text.Length > 75)
+            {
+                MessageBox.Show("No puede ingresar mas de 75 Caracteres", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtDescripcion.Text = "";
+            }
         }
     }
 }

@@ -104,6 +104,7 @@
             this.txtDescripcion.Size = new System.Drawing.Size(314, 110);
             this.txtDescripcion.TabIndex = 22;
             this.txtDescripcion.Tag = "descripcion_tipo_transaccion";
+            this.txtDescripcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescripcion_KeyPress);
             // 
             // txtTransaccion
             // 
@@ -120,7 +121,7 @@
             this.txtCodigo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigo.Location = new System.Drawing.Point(181, 175);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(314, 27);
+            this.txtCodigo.Size = new System.Drawing.Size(115, 27);
             this.txtCodigo.TabIndex = 20;
             this.txtCodigo.Tag = "pk_id_tipo_transaccion";
             // 

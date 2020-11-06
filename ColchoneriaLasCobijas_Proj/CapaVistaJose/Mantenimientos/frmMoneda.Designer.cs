@@ -153,6 +153,7 @@
             this.txtDescripcion.Size = new System.Drawing.Size(375, 116);
             this.txtDescripcion.TabIndex = 30;
             this.txtDescripcion.Tag = "descripcion_tipo_moneda";
+            this.txtDescripcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescripcion_KeyPress);
             // 
             // txtSimbolo
             // 
@@ -162,6 +163,7 @@
             this.txtSimbolo.Size = new System.Drawing.Size(375, 27);
             this.txtSimbolo.TabIndex = 29;
             this.txtSimbolo.Tag = "simbolo_tipo_moneda";
+            this.txtSimbolo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSimbolo_KeyPress);
             // 
             // txtMoneda
             // 

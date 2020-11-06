@@ -126,7 +126,7 @@ namespace CapaVistaJose.Mantenimientos
             //Este if verifica que no se deje ningun campo en blanco, si hay uno en blando muestra el mensaje de que se necesitan llenar los campos
             if (txtDescripcion.Text == "" || txtMonto.Text == "" || cmbCodigoCuenta.SelectedItem == null || cmbTransaccion.SelectedItem == null || cmbMoneda.SelectedItem == null)
             {
-                MessageBox.Show("NO DEBE DEJAR CAMPOS VACIOS");
+                MessageBox.Show("NO DEBE DEJAR CAMPOS VACIOS", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -139,7 +139,8 @@ namespace CapaVistaJose.Mantenimientos
                     "VALUES (" + codigoA + "," + Int32.Parse(cmbCodigoCuenta.SelectedItem.ToString()) + ",'" + Fecha + "'," + Int32.Parse(cmbCodigoTransaccion.SelectedItem.ToString()) + ",'" + Int32.Parse(cmbCodigoMoneda.SelectedItem.ToString()) + "', " + txtMonto.Text + ",'" + txtDescripcion.Text + "' )";
                     OdbcCommand comm = new OdbcCommand(Insertar, cn.conexion());
                     OdbcDataReader mostrarC = comm.ExecuteReader();
-                    MessageBox.Show("Los datos se ingresaron correctamente");
+                    MessageBox.Show("Los Datos se ingresaron correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 }
                 catch (Exception ex)
                 {
@@ -162,6 +163,13 @@ namespace CapaVistaJose.Mantenimientos
         {
             ClsValidaciones VALIDAR = new ClsValidaciones();
             VALIDAR.funcSueldo(e);
+            if (txtMonto.Text.Length > 20)
+            {
+                MessageBox.Show("No puede ingresar mas de 20 Numeros", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtMonto.Text = "";
+
+            }
+           
         }
 
         private void cmbCodigoCuenta_SelectedIndexChanged(object sender, EventArgs e)
@@ -192,6 +200,16 @@ namespace CapaVistaJose.Mantenimientos
         private void cmbMoneda_SelectedIndexChanged(object sender, EventArgs e)
         {
             cmbCodigoMoneda.SelectedIndex = cmbMoneda.SelectedIndex;
+        }
+
+        private void txtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (txtDescripcion.Text.Length > 40)
+            {
+                MessageBox.Show("No puede ingresar mas de 40 Numeros", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtDescripcion.Text = "";
+
+            }
         }
     }
 }
