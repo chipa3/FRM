@@ -23,6 +23,7 @@ namespace CapaVistaJose.Mantenimientos
             navegador1.Usuario = UsuarioAplicacion;
             FormularioPadre = formularioPadre;
             CargarCombos();
+          
         }
 
         void CargarCombos()
@@ -181,6 +182,11 @@ namespace CapaVistaJose.Mantenimientos
         {
 
             cmbMoneda.SelectedIndex = cmbCodigoMoneda.SelectedIndex;
+        }
+
+        private void frmCuentaBancaria_FormClosed(object sender, FormClosedEventArgs e)
+        {
+        
         }
     }
 }

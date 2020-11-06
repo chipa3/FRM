@@ -55,132 +55,133 @@
             // cmbMoneda
             // 
             this.cmbMoneda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbMoneda.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMoneda.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMoneda.FormattingEnabled = true;
             this.cmbMoneda.Location = new System.Drawing.Point(215, 285);
             this.cmbMoneda.Name = "cmbMoneda";
-            this.cmbMoneda.Size = new System.Drawing.Size(282, 30);
+            this.cmbMoneda.Size = new System.Drawing.Size(282, 28);
             this.cmbMoneda.TabIndex = 55;
             this.cmbMoneda.SelectedIndexChanged += new System.EventHandler(this.cmbMoneda_SelectedIndexChanged);
             // 
             // cmbPropietario
             // 
             this.cmbPropietario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbPropietario.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPropietario.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPropietario.FormattingEnabled = true;
             this.cmbPropietario.Location = new System.Drawing.Point(215, 240);
             this.cmbPropietario.Name = "cmbPropietario";
-            this.cmbPropietario.Size = new System.Drawing.Size(282, 30);
+            this.cmbPropietario.Size = new System.Drawing.Size(282, 28);
             this.cmbPropietario.TabIndex = 54;
             this.cmbPropietario.SelectedIndexChanged += new System.EventHandler(this.cmbPropietario_SelectedIndexChanged);
             // 
             // cmbBanco
             // 
             this.cmbBanco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbBanco.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbBanco.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbBanco.FormattingEnabled = true;
             this.cmbBanco.Location = new System.Drawing.Point(215, 199);
             this.cmbBanco.Name = "cmbBanco";
-            this.cmbBanco.Size = new System.Drawing.Size(282, 30);
+            this.cmbBanco.Size = new System.Drawing.Size(282, 28);
             this.cmbBanco.TabIndex = 53;
             this.cmbBanco.SelectedIndexChanged += new System.EventHandler(this.cmbBanco_SelectedIndexChanged);
             // 
             // dvgDatos
             // 
             this.dvgDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgDatos.Enabled = false;
             this.dvgDatos.Location = new System.Drawing.Point(619, 156);
             this.dvgDatos.Name = "dvgDatos";
+            this.dvgDatos.ReadOnly = true;
             this.dvgDatos.RowHeadersWidth = 51;
             this.dvgDatos.RowTemplate.Height = 24;
+            this.dvgDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dvgDatos.Size = new System.Drawing.Size(812, 270);
             this.dvgDatos.TabIndex = 52;
             // 
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
-            this.lblEstado.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstado.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstado.Location = new System.Drawing.Point(12, 387);
             this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(90, 22);
+            this.lblEstado.Size = new System.Drawing.Size(77, 20);
             this.lblEstado.TabIndex = 51;
             this.lblEstado.Text = "ESTADO";
             // 
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
-            this.lblFecha.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.Location = new System.Drawing.Point(12, 439);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(183, 22);
+            this.lblFecha.Size = new System.Drawing.Size(157, 20);
             this.lblFecha.TabIndex = 50;
             this.lblFecha.Text = "FECHA APERTURA";
             // 
             // lblSaldo
             // 
             this.lblSaldo.AutoSize = true;
-            this.lblSaldo.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSaldo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSaldo.Location = new System.Drawing.Point(12, 335);
             this.lblSaldo.Name = "lblSaldo";
-            this.lblSaldo.Size = new System.Drawing.Size(76, 22);
+            this.lblSaldo.Size = new System.Drawing.Size(65, 20);
             this.lblSaldo.TabIndex = 49;
             this.lblSaldo.Text = "SALDO";
             // 
             // lblMoneda
             // 
             this.lblMoneda.AutoSize = true;
-            this.lblMoneda.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMoneda.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMoneda.Location = new System.Drawing.Point(12, 285);
             this.lblMoneda.Name = "lblMoneda";
-            this.lblMoneda.Size = new System.Drawing.Size(100, 22);
+            this.lblMoneda.Size = new System.Drawing.Size(85, 20);
             this.lblMoneda.TabIndex = 48;
             this.lblMoneda.Text = "MONEDA";
             // 
             // lblPropietario
             // 
             this.lblPropietario.AutoSize = true;
-            this.lblPropietario.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPropietario.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPropietario.Location = new System.Drawing.Point(12, 237);
             this.lblPropietario.Name = "lblPropietario";
-            this.lblPropietario.Size = new System.Drawing.Size(138, 22);
+            this.lblPropietario.Size = new System.Drawing.Size(120, 20);
             this.lblPropietario.TabIndex = 47;
             this.lblPropietario.Text = "PROPIETARIO";
             // 
             // lblBanco
             // 
             this.lblBanco.AutoSize = true;
-            this.lblBanco.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBanco.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBanco.Location = new System.Drawing.Point(12, 196);
             this.lblBanco.Name = "lblBanco";
-            this.lblBanco.Size = new System.Drawing.Size(81, 22);
+            this.lblBanco.Size = new System.Drawing.Size(70, 20);
             this.lblBanco.TabIndex = 46;
             this.lblBanco.Text = "BANCO";
             // 
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigo.Location = new System.Drawing.Point(12, 159);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(94, 22);
+            this.lblCodigo.Size = new System.Drawing.Size(81, 20);
             this.lblCodigo.TabIndex = 45;
             this.lblCodigo.Text = "CODIGO";
             // 
             // dtpFecha
             // 
-            this.dtpFecha.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFecha.Location = new System.Drawing.Point(261, 439);
+            this.dtpFecha.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFecha.Location = new System.Drawing.Point(244, 439);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(442, 31);
+            this.dtpFecha.Size = new System.Drawing.Size(442, 27);
             this.dtpFecha.TabIndex = 43;
             this.dtpFecha.Tag = "fecha_apertura_cuenta_bancaria";
             // 
             // txtSueldo
             // 
-            this.txtSueldo.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSueldo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSueldo.Location = new System.Drawing.Point(215, 332);
             this.txtSueldo.Name = "txtSueldo";
-            this.txtSueldo.Size = new System.Drawing.Size(282, 31);
+            this.txtSueldo.Size = new System.Drawing.Size(282, 27);
             this.txtSueldo.TabIndex = 42;
             this.txtSueldo.Tag = "saldo_cuenta_bancaria";
             this.txtSueldo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSueldo_KeyPress);
@@ -188,11 +189,11 @@
             // cmbCodigoMoneda
             // 
             this.cmbCodigoMoneda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCodigoMoneda.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCodigoMoneda.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCodigoMoneda.FormattingEnabled = true;
             this.cmbCodigoMoneda.Location = new System.Drawing.Point(506, 282);
             this.cmbCodigoMoneda.Name = "cmbCodigoMoneda";
-            this.cmbCodigoMoneda.Size = new System.Drawing.Size(61, 30);
+            this.cmbCodigoMoneda.Size = new System.Drawing.Size(61, 28);
             this.cmbCodigoMoneda.TabIndex = 41;
             this.cmbCodigoMoneda.Tag = "fk_id_tipo_moneda";
             this.cmbCodigoMoneda.SelectedIndexChanged += new System.EventHandler(this.cmbCodigoMoneda_SelectedIndexChanged);
@@ -200,11 +201,11 @@
             // cmbCodigoPropietario
             // 
             this.cmbCodigoPropietario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCodigoPropietario.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCodigoPropietario.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCodigoPropietario.FormattingEnabled = true;
             this.cmbCodigoPropietario.Location = new System.Drawing.Point(506, 237);
             this.cmbCodigoPropietario.Name = "cmbCodigoPropietario";
-            this.cmbCodigoPropietario.Size = new System.Drawing.Size(61, 30);
+            this.cmbCodigoPropietario.Size = new System.Drawing.Size(61, 28);
             this.cmbCodigoPropietario.TabIndex = 40;
             this.cmbCodigoPropietario.Tag = "fk_id_propietario";
             this.cmbCodigoPropietario.SelectedIndexChanged += new System.EventHandler(this.cmbCodigoPropietario_SelectedIndexChanged);
@@ -212,28 +213,28 @@
             // cmbCodigoBanco
             // 
             this.cmbCodigoBanco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCodigoBanco.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCodigoBanco.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCodigoBanco.FormattingEnabled = true;
             this.cmbCodigoBanco.Location = new System.Drawing.Point(506, 201);
             this.cmbCodigoBanco.Name = "cmbCodigoBanco";
-            this.cmbCodigoBanco.Size = new System.Drawing.Size(61, 30);
+            this.cmbCodigoBanco.Size = new System.Drawing.Size(61, 28);
             this.cmbCodigoBanco.TabIndex = 39;
             this.cmbCodigoBanco.Tag = "fk_id_banco";
             this.cmbCodigoBanco.SelectedIndexChanged += new System.EventHandler(this.cmbCodigoBanco_SelectedIndexChanged);
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigo.Location = new System.Drawing.Point(215, 156);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(110, 31);
+            this.txtCodigo.Size = new System.Drawing.Size(110, 27);
             this.txtCodigo.TabIndex = 38;
             this.txtCodigo.Tag = "pk_id_numero_cuenta_bancaria";
             // 
             // navegador1
             // 
             this.navegador1.BackColor = System.Drawing.Color.Transparent;
-            this.navegador1.Location = new System.Drawing.Point(19, 20);
+            this.navegador1.Location = new System.Drawing.Point(16, 13);
             this.navegador1.Margin = new System.Windows.Forms.Padding(4);
             this.navegador1.Name = "navegador1";
             this.navegador1.Size = new System.Drawing.Size(1412, 129);
@@ -242,10 +243,10 @@
             // 
             // txtEstado
             // 
-            this.txtEstado.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEstado.Location = new System.Drawing.Point(709, 439);
+            this.txtEstado.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstado.Location = new System.Drawing.Point(692, 439);
             this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(65, 31);
+            this.txtEstado.Size = new System.Drawing.Size(65, 27);
             this.txtEstado.TabIndex = 56;
             this.txtEstado.Tag = "estado_apertura_cuenta_bancaria";
             this.txtEstado.Visible = false;
@@ -254,10 +255,10 @@
             // rbEstadoActivo
             // 
             this.rbEstadoActivo.AutoSize = true;
-            this.rbEstadoActivo.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbEstadoActivo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbEstadoActivo.Location = new System.Drawing.Point(215, 387);
             this.rbEstadoActivo.Name = "rbEstadoActivo";
-            this.rbEstadoActivo.Size = new System.Drawing.Size(89, 26);
+            this.rbEstadoActivo.Size = new System.Drawing.Size(80, 24);
             this.rbEstadoActivo.TabIndex = 57;
             this.rbEstadoActivo.TabStop = true;
             this.rbEstadoActivo.Text = "Activo";
@@ -267,10 +268,10 @@
             // rbEstadoInactivo
             // 
             this.rbEstadoInactivo.AutoSize = true;
-            this.rbEstadoInactivo.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbEstadoInactivo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbEstadoInactivo.Location = new System.Drawing.Point(339, 387);
             this.rbEstadoInactivo.Name = "rbEstadoInactivo";
-            this.rbEstadoInactivo.Size = new System.Drawing.Size(103, 26);
+            this.rbEstadoInactivo.Size = new System.Drawing.Size(92, 24);
             this.rbEstadoInactivo.TabIndex = 58;
             this.rbEstadoInactivo.TabStop = true;
             this.rbEstadoInactivo.Text = "Inactivo";
@@ -308,6 +309,7 @@
             this.MinimizeBox = false;
             this.Name = "frmCuentaBancaria";
             this.Text = "Mantenimiento - Cuenta Bancaria - 1305";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmCuentaBancaria_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dvgDatos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

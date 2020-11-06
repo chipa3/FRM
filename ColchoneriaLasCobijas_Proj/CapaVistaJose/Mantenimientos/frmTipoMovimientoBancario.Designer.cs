@@ -46,57 +46,58 @@
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
-            this.lblEstado.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstado.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstado.Location = new System.Drawing.Point(16, 383);
             this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(90, 22);
+            this.lblEstado.Size = new System.Drawing.Size(77, 20);
             this.lblEstado.TabIndex = 28;
             this.lblEstado.Text = "ESTADO";
             // 
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescripcion.Location = new System.Drawing.Point(16, 269);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(144, 22);
+            this.lblDescripcion.Size = new System.Drawing.Size(123, 20);
             this.lblDescripcion.TabIndex = 27;
             this.lblDescripcion.Text = "DESCRIPCION";
             // 
             // lblTransaccion
             // 
             this.lblTransaccion.AutoSize = true;
-            this.lblTransaccion.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTransaccion.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTransaccion.Location = new System.Drawing.Point(16, 223);
             this.lblTransaccion.Name = "lblTransaccion";
-            this.lblTransaccion.Size = new System.Drawing.Size(152, 22);
+            this.lblTransaccion.Size = new System.Drawing.Size(131, 20);
             this.lblTransaccion.TabIndex = 26;
             this.lblTransaccion.Text = "TRANSACCION";
             // 
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigo.Location = new System.Drawing.Point(16, 180);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(94, 22);
+            this.lblCodigo.Size = new System.Drawing.Size(81, 20);
             this.lblCodigo.TabIndex = 25;
             this.lblCodigo.Text = "CODIGO";
             // 
             // dgvDatos
             // 
             this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDatos.Enabled = false;
             this.dgvDatos.Location = new System.Drawing.Point(511, 175);
             this.dgvDatos.Name = "dgvDatos";
+            this.dgvDatos.ReadOnly = true;
             this.dgvDatos.RowHeadersWidth = 51;
             this.dgvDatos.RowTemplate.Height = 24;
+            this.dgvDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDatos.Size = new System.Drawing.Size(889, 235);
             this.dgvDatos.TabIndex = 24;
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescripcion.Location = new System.Drawing.Point(181, 264);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
@@ -106,26 +107,27 @@
             // 
             // txtTransaccion
             // 
-            this.txtTransaccion.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTransaccion.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTransaccion.Location = new System.Drawing.Point(181, 220);
             this.txtTransaccion.Name = "txtTransaccion";
-            this.txtTransaccion.Size = new System.Drawing.Size(314, 31);
+            this.txtTransaccion.Size = new System.Drawing.Size(314, 27);
             this.txtTransaccion.TabIndex = 21;
             this.txtTransaccion.Tag = "nombre_tipo_transaccion";
             this.txtTransaccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTransaccion_KeyPress);
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigo.Location = new System.Drawing.Point(181, 175);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(314, 31);
+            this.txtCodigo.Size = new System.Drawing.Size(314, 27);
             this.txtCodigo.TabIndex = 20;
             this.txtCodigo.Tag = "pk_id_tipo_transaccion";
             // 
             // navegador1
             // 
             this.navegador1.BackColor = System.Drawing.Color.Transparent;
+            this.navegador1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
             this.navegador1.Location = new System.Drawing.Point(14, 19);
             this.navegador1.Margin = new System.Windows.Forms.Padding(4);
             this.navegador1.Name = "navegador1";
@@ -136,10 +138,10 @@
             // rbEstadoActivo
             // 
             this.rbEstadoActivo.AutoSize = true;
-            this.rbEstadoActivo.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbEstadoActivo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbEstadoActivo.Location = new System.Drawing.Point(181, 383);
             this.rbEstadoActivo.Name = "rbEstadoActivo";
-            this.rbEstadoActivo.Size = new System.Drawing.Size(89, 26);
+            this.rbEstadoActivo.Size = new System.Drawing.Size(80, 24);
             this.rbEstadoActivo.TabIndex = 29;
             this.rbEstadoActivo.TabStop = true;
             this.rbEstadoActivo.Text = "Activo";
@@ -149,10 +151,10 @@
             // rbEstadoInactivo
             // 
             this.rbEstadoInactivo.AutoSize = true;
-            this.rbEstadoInactivo.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbEstadoInactivo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbEstadoInactivo.Location = new System.Drawing.Point(297, 383);
             this.rbEstadoInactivo.Name = "rbEstadoInactivo";
-            this.rbEstadoInactivo.Size = new System.Drawing.Size(103, 26);
+            this.rbEstadoInactivo.Size = new System.Drawing.Size(92, 24);
             this.rbEstadoInactivo.TabIndex = 30;
             this.rbEstadoInactivo.TabStop = true;
             this.rbEstadoInactivo.Text = "Inactivo";
@@ -161,10 +163,10 @@
             // 
             // txtEstado
             // 
-            this.txtEstado.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstado.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEstado.Location = new System.Drawing.Point(413, 383);
             this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(82, 31);
+            this.txtEstado.Size = new System.Drawing.Size(82, 27);
             this.txtEstado.TabIndex = 31;
             this.txtEstado.Tag = "estado_tipo_transaccion";
             this.txtEstado.Visible = false;

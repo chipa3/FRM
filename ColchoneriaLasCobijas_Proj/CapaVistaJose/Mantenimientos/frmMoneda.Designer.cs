@@ -47,9 +47,10 @@
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(517, 417);
+            this.txtEstado.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstado.Location = new System.Drawing.Point(517, 410);
             this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(67, 22);
+            this.txtEstado.Size = new System.Drawing.Size(67, 27);
             this.txtEstado.TabIndex = 40;
             this.txtEstado.Tag = "estado_tipo_moneda";
             this.txtEstado.Visible = false;
@@ -58,10 +59,10 @@
             // rbEstadoInactivo
             // 
             this.rbEstadoInactivo.AutoSize = true;
-            this.rbEstadoInactivo.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbEstadoInactivo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbEstadoInactivo.Location = new System.Drawing.Point(327, 417);
             this.rbEstadoInactivo.Name = "rbEstadoInactivo";
-            this.rbEstadoInactivo.Size = new System.Drawing.Size(103, 26);
+            this.rbEstadoInactivo.Size = new System.Drawing.Size(92, 24);
             this.rbEstadoInactivo.TabIndex = 39;
             this.rbEstadoInactivo.TabStop = true;
             this.rbEstadoInactivo.Text = "Inactivo";
@@ -71,10 +72,10 @@
             // rbEstadoActivo
             // 
             this.rbEstadoActivo.AutoSize = true;
-            this.rbEstadoActivo.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbEstadoActivo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbEstadoActivo.Location = new System.Drawing.Point(209, 417);
             this.rbEstadoActivo.Name = "rbEstadoActivo";
-            this.rbEstadoActivo.Size = new System.Drawing.Size(89, 26);
+            this.rbEstadoActivo.Size = new System.Drawing.Size(80, 24);
             this.rbEstadoActivo.TabIndex = 38;
             this.rbEstadoActivo.TabStop = true;
             this.rbEstadoActivo.Text = "Activo";
@@ -84,67 +85,68 @@
             // dgvDatos
             // 
             this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDatos.Enabled = false;
             this.dgvDatos.Location = new System.Drawing.Point(607, 143);
             this.dgvDatos.Name = "dgvDatos";
+            this.dgvDatos.ReadOnly = true;
             this.dgvDatos.RowHeadersWidth = 51;
             this.dgvDatos.RowTemplate.Height = 24;
+            this.dgvDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDatos.Size = new System.Drawing.Size(803, 294);
             this.dgvDatos.TabIndex = 37;
             // 
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
-            this.lblEstado.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstado.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstado.Location = new System.Drawing.Point(16, 412);
             this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(90, 22);
+            this.lblEstado.Size = new System.Drawing.Size(77, 20);
             this.lblEstado.TabIndex = 36;
             this.lblEstado.Text = "ESTADO";
             // 
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescripcion.Location = new System.Drawing.Point(16, 288);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(144, 22);
+            this.lblDescripcion.Size = new System.Drawing.Size(123, 20);
             this.lblDescripcion.TabIndex = 35;
             this.lblDescripcion.Text = "DESCRIPCION";
             // 
             // lblSimbolo
             // 
             this.lblSimbolo.AutoSize = true;
-            this.lblSimbolo.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSimbolo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSimbolo.Location = new System.Drawing.Point(16, 243);
             this.lblSimbolo.Name = "lblSimbolo";
-            this.lblSimbolo.Size = new System.Drawing.Size(99, 22);
+            this.lblSimbolo.Size = new System.Drawing.Size(85, 20);
             this.lblSimbolo.TabIndex = 34;
             this.lblSimbolo.Text = "SIMBOLO";
             // 
             // lblMoneda
             // 
             this.lblMoneda.AutoSize = true;
-            this.lblMoneda.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMoneda.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMoneda.Location = new System.Drawing.Point(16, 194);
             this.lblMoneda.Name = "lblMoneda";
-            this.lblMoneda.Size = new System.Drawing.Size(100, 22);
+            this.lblMoneda.Size = new System.Drawing.Size(85, 20);
             this.lblMoneda.TabIndex = 33;
             this.lblMoneda.Text = "MONEDA";
             // 
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigo.Location = new System.Drawing.Point(16, 150);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(94, 22);
+            this.lblCodigo.Size = new System.Drawing.Size(81, 20);
             this.lblCodigo.TabIndex = 32;
             this.lblCodigo.Text = "CODIGO";
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescripcion.Location = new System.Drawing.Point(209, 285);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
@@ -154,29 +156,29 @@
             // 
             // txtSimbolo
             // 
-            this.txtSimbolo.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSimbolo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSimbolo.Location = new System.Drawing.Point(209, 240);
             this.txtSimbolo.Name = "txtSimbolo";
-            this.txtSimbolo.Size = new System.Drawing.Size(375, 31);
+            this.txtSimbolo.Size = new System.Drawing.Size(375, 27);
             this.txtSimbolo.TabIndex = 29;
             this.txtSimbolo.Tag = "simbolo_tipo_moneda";
             // 
             // txtMoneda
             // 
-            this.txtMoneda.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMoneda.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMoneda.Location = new System.Drawing.Point(209, 196);
             this.txtMoneda.Name = "txtMoneda";
-            this.txtMoneda.Size = new System.Drawing.Size(375, 31);
+            this.txtMoneda.Size = new System.Drawing.Size(375, 27);
             this.txtMoneda.TabIndex = 28;
             this.txtMoneda.Tag = "moneda_tipo_moneda";
             this.txtMoneda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMoneda_KeyPress);
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigo.Location = new System.Drawing.Point(209, 143);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(100, 31);
+            this.txtCodigo.Size = new System.Drawing.Size(100, 27);
             this.txtCodigo.TabIndex = 27;
             this.txtCodigo.Tag = "pk_id_tipo_moneda";
             // 

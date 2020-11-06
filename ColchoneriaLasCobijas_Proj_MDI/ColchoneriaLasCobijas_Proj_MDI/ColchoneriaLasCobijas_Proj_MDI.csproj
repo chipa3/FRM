@@ -55,16 +55,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MDIFRM.cs">
+    <Compile Include="MDI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MDIFRM.Designer.cs">
-      <DependentUpon>MDIFRM.cs</DependentUpon>
+    <Compile Include="MDI.Designer.cs">
+      <DependentUpon>MDI.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="MDIFRM.resx">
-      <DependentUpon>MDIFRM.cs</DependentUpon>
+    <EmbeddedResource Include="MDI.resx">
+      <DependentUpon>MDI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

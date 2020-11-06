@@ -16,7 +16,7 @@ namespace ColchoneriaLasCobijas_Proj_MDI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MDIFRM());
+            Application.Run(new MDI());
         }
     }
 }

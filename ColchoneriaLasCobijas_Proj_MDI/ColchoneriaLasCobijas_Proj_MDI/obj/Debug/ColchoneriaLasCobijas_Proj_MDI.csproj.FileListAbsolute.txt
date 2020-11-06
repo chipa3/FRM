@@ -105,3 +105,4 @@ C:\Users\jose lopez\Documents\GitHub\FRM\ColchoneriaLasCobijas_Proj_MDI\Colchone
 C:\Users\jose lopez\Documents\GitHub\FRM\ColchoneriaLasCobijas_Proj_MDI\ColchoneriaLasCobijas_Proj_MDI\obj\Debug\ColchoneriaLasCobijas_Proj_MDI.csproj.CopyComplete
 C:\Users\jose lopez\Documents\GitHub\FRM\ColchoneriaLasCobijas_Proj_MDI\ColchoneriaLasCobijas_Proj_MDI\obj\Debug\ColchoneriaLasCobijas_Proj_MDI.exe
 C:\Users\jose lopez\Documents\GitHub\FRM\ColchoneriaLasCobijas_Proj_MDI\ColchoneriaLasCobijas_Proj_MDI\obj\Debug\ColchoneriaLasCobijas_Proj_MDI.pdb
+C:\Users\jose lopez\Documents\GitHub\FRM\ColchoneriaLasCobijas_Proj_MDI\ColchoneriaLasCobijas_Proj_MDI\obj\Debug\ColchoneriaLasCobijas_Proj_MDI.MDI.resources
