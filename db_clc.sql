@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-11-2020 a las 21:27:34
+-- Tiempo de generación: 08-11-2020 a las 21:42:10
 -- Versión del servidor: 10.1.37-MariaDB
 -- Versión de PHP: 7.3.1
 
@@ -234,69 +234,21 @@ CREATE TABLE `bitacora` (
 --
 
 INSERT INTO `bitacora` (`pk_id_bitacora`, `fk_idusuario_bitacora`, `fk_idaplicacion_bitacora`, `fechahora_bitacora`, `direccionhost_bitacora`, `nombrehost_bitacora`, `accion_bitacora`) VALUES
-(1, 6, 1, '08/11/2020 09:47:57', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo Exitoso'),
-(2, 6, 1, '08/11/2020 09:49:36', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo Exitoso'),
-(3, 6, 1, '08/11/2020 11:21:09', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo Exitoso'),
-(4, 6, 1, '08/11/2020 11:52:33', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo Exitoso'),
-(5, 6, 1, '08/11/2020 11:54:21', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo Exitoso'),
-(6, 6, 1309, '08/11/2020 11:54:21', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', ' INSERT INTO peticion_poliza VALUES ( 2,  DATO NULO,  2020-11-08 11:54:39,  DATO NULO,  500,  2,  1) '),
-(7, 6, 1309, '08/11/2020 11:54:21', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Cancelar'),
-(8, 6, 1309, '08/11/2020 11:54:21', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Cancelar'),
-(9, 6, 1309, '08/11/2020 11:54:21', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Formulario de ayuda'),
-(10, 6, 1, '08/11/2020 12:03:04', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo Exitoso'),
-(11, 6, 1309, '08/11/2020 12:03:04', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', ' INSERT INTO peticion_poliza VALUES ( 3,  A,  2020-11-08 12:03:38,  A,  2,  1,  1) '),
-(12, 6, 1309, '08/11/2020 12:03:04', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Cancelar'),
-(13, 6, 1, '08/11/2020 12:08:12', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo Exitoso'),
-(14, 6, 1309, '08/11/2020 12:08:12', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', ' INSERT INTO peticion_poliza VALUES ( 4,  PRUEBA,  2020-11-10 12:08:33,  PRUEBA,  2600.600,  1,  1) '),
-(15, 6, 1309, '08/11/2020 12:08:12', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'UPDATE peticion_poliza SET   concepto_peticion_poliza =  PRUEBA,  fecha_peticion_poliza =  2020-11-10 12:08:33,  descripcion_peticion_poliza =  PRUEBA,  monto_peticion_poliza =  2600.6.30,  fk_pk_poliza_encabezado =  1,  estado_peticion_poliza =  1  '),
-(16, 6, 1, '08/11/2020 12:13:31', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo Exitoso'),
-(17, 6, 1309, '08/11/2020 12:13:31', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Cancelar'),
-(18, 6, 1, '08/11/2020 13:05:53', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo erroneo'),
-(19, 6, 1, '08/11/2020 13:05:53', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo erroneo'),
-(20, 6, 1, '08/11/2020 13:05:53', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo erroneo'),
-(21, 6, 1, '08/11/2020 13:10:00', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo erroneo'),
-(22, 6, 1, '08/11/2020 13:10:00', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo erroneo'),
-(23, 6, 1, '08/11/2020 13:10:00', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo erroneo'),
-(24, 6, 1, '08/11/2020 13:12:32', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo erroneo'),
-(25, 6, 1, '08/11/2020 13:30:17', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo erroneo'),
-(26, 6, 1, '08/11/2020 13:30:17', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo erroneo'),
-(27, 6, 1, '08/11/2020 13:30:17', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo erroneo'),
-(28, 4, 1, '08/11/2020 13:32:01', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo erroneo'),
-(29, 4, 1, '08/11/2020 13:32:01', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo erroneo'),
-(30, 6, 1, '08/11/2020 13:34:20', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo erroneo'),
-(31, 1, 1, '08/11/2020 13:43:26', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo Exitoso'),
-(32, 1, 1305, '08/11/2020 13:43:26', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Trato de ingresar a la aplicacion Cuenta Bancaria'),
-(33, 1, 1, '08/11/2020 14:15:32', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo erroneo'),
-(34, 1, 1, '08/11/2020 14:15:32', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo Exitoso'),
-(35, 1, 2, '08/11/2020 14:15:32', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso al mantenimiento de usuarios'),
-(36, 1, 1, '08/11/2020 14:16:33', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo Exitoso'),
-(37, 1, 2, '08/11/2020 14:16:33', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso al mantenimiento de usuarios'),
-(38, 1, 2, '08/11/2020 14:16:33', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', ' INSERT INTO login VALUES ( 7,  JLOPEZ,  LwUsihMe9Bl//D/5WaIzLA==,  JOSE LOPEZ,  1) '),
-(39, 1, 3, '08/11/2020 14:16:33', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso al mantenimiento de aplicaciones'),
-(40, 1, 3, '08/11/2020 14:16:33', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso al mantenimiento de aplicaciones'),
-(41, 1, 6, '08/11/2020 14:16:33', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la asignacion de aplicaciones'),
-(42, 1, 6, '08/11/2020 14:16:33', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la asignacion de aplicaciones'),
-(43, 1, 8, '08/11/2020 14:16:33', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la apliacion de Modulo'),
-(44, 1, 8, '08/11/2020 14:16:33', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la apliacion de Modulo'),
-(45, 1, 4, '08/11/2020 14:16:33', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la apliacion de mantenimiento de perfil'),
-(46, 1, 3, '08/11/2020 14:16:33', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso al mantenimiento de aplicaciones'),
-(47, 1, 6, '08/11/2020 14:16:33', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la asignacion de aplicaciones'),
-(48, 1, 1, '08/11/2020 14:22:57', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo Exitoso'),
-(49, 1, 5, '08/11/2020 14:22:57', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la apliacion de mantenimiento de perfil apliaciones a perfil'),
-(50, 1, 4, '08/11/2020 14:22:57', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la apliacion de mantenimiento de perfil'),
-(51, 1, 5, '08/11/2020 14:22:57', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la apliacion de mantenimiento de perfil apliaciones a perfil'),
-(52, 1, 6, '08/11/2020 14:22:57', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la asignacion de aplicaciones'),
-(53, 1, 2, '08/11/2020 14:22:57', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso al mantenimiento de usuarios'),
-(54, 1, 2, '08/11/2020 14:22:57', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Eliminacion de Datos'),
-(55, 1, 2, '08/11/2020 14:22:57', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'UPDATE login SET estado_login=0 WHERE pk_id_login= 6 '),
-(56, 1, 6, '08/11/2020 14:22:57', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la asignacion de aplicaciones'),
-(57, 6, 1, '08/11/2020 14:22:57', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo Exitoso'),
-(58, 6, 1305, '08/11/2020 14:22:57', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion Cuenta Bancaria'),
-(59, 6, 1306, '08/11/2020 14:22:57', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion Propietario de cuenta bancaria'),
-(60, 6, 1, '08/11/2020 14:22:57', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo Exitoso'),
-(61, 6, 1305, '08/11/2020 14:22:57', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion Cuenta Bancaria'),
-(62, 6, 1303, '08/11/2020 14:22:57', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion de tipo moneda'),
-(63, 6, 2, '08/11/2020 14:22:57', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Trato de ingresar al mantenimiento de usuarios');
+(72, 7, 1, '08/11/2020 14:34:45', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo Exitoso'),
+(73, 7, 1305, '08/11/2020 14:34:45', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion Cuenta Bancaria'),
+(74, 7, 1309, '08/11/2020 14:34:45', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion de peticion poliza'),
+(75, 7, 1309, '08/11/2020 14:34:45', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion de peticion poliza'),
+(76, 7, 1305, '08/11/2020 14:34:45', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion Cuenta Bancaria'),
+(77, 7, 1, '08/11/2020 14:40:22', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo Exitoso'),
+(78, 7, 1305, '08/11/2020 14:40:22', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion Cuenta Bancaria'),
+(79, 7, 1306, '08/11/2020 14:40:22', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion Propietario de cuenta bancaria'),
+(80, 7, 1302, '08/11/2020 14:40:22', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion Bancos'),
+(81, 7, 1303, '08/11/2020 14:40:22', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion de tipo moneda'),
+(82, 7, 1304, '08/11/2020 14:40:22', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion de movimiento bancario'),
+(83, 7, 1309, '08/11/2020 14:40:22', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion de peticion poliza'),
+(84, 7, 1307, '08/11/2020 14:40:22', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso al proceso de Transacciones'),
+(85, 7, 4, '08/11/2020 14:40:22', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Trato de ingresar a la aplicacion de mantenimiento de perfil'),
+(86, 7, 1308, '08/11/2020 14:40:22', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso al reporte de Disponibilidad Diaria');
 
 -- --------------------------------------------------------
 
@@ -1022,7 +974,6 @@ INSERT INTO `login` (`pk_id_login`, `usuario_login`, `contraseña_login`, `nombr
 (3, 'bmaza', 'xTfsC3/XR/CVyDvNr1Fs+g==', 'Bryan Mazariegos', 1),
 (4, 'jsican', 'jsican', 'Jeshua Sican', 0),
 (5, 'jmorataya', '123', 'Julio Morataya', 0),
-(6, 'JLOPEZ', 'JLOPEZ', 'JOSE LOPEZ', 0),
 (7, 'JLOPEZ', 'LwUsihMe9Bl//D/5WaIzLA==', 'JOSE LOPEZ', 1);
 
 -- --------------------------------------------------------
@@ -2487,7 +2438,7 @@ ALTER TABLE `aplicacion_usuario`
 -- AUTO_INCREMENT de la tabla `bitacora`
 --
 ALTER TABLE `bitacora`
-  MODIFY `pk_id_bitacora` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
+  MODIFY `pk_id_bitacora` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
 
 --
 -- AUTO_INCREMENT de la tabla `bodega`

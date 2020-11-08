@@ -75,7 +75,7 @@ namespace ColchoneriaLasCobijas_Proj_MDI
             {
                 bit.user(txtUsuario.Text);
                 bit.insert("Ingreso a la aplicacion Propietario de cuenta bancaria", 1306);
-                frmCuentaBancaria asignacion = new frmCuentaBancaria(txtUsuario.Text, this);
+                frmPropietario asignacion = new frmPropietario(txtUsuario.Text, this);
                 asignacion.MdiParent = this;
                 asignacion.Show();
             }
@@ -93,7 +93,7 @@ namespace ColchoneriaLasCobijas_Proj_MDI
             {
                 bit.user(txtUsuario.Text);
                 bit.insert("Ingreso a la aplicacion de tipo moneda", 1303);
-                frmCuentaBancaria asignacion = new frmCuentaBancaria(txtUsuario.Text, this);
+                frmMoneda asignacion = new frmMoneda(txtUsuario.Text, this);
                 asignacion.MdiParent = this;
                 asignacion.Show();
             }
@@ -111,7 +111,7 @@ namespace ColchoneriaLasCobijas_Proj_MDI
             {
                 bit.user(txtUsuario.Text);
                 bit.insert("Ingreso a la aplicacion de movimiento bancario", 1304);
-                frmCuentaBancaria asignacion = new frmCuentaBancaria(txtUsuario.Text, this);
+                frmTipoMovimientoBancario asignacion = new frmTipoMovimientoBancario(txtUsuario.Text, this);
                 asignacion.MdiParent = this;
                 asignacion.Show();
             }
@@ -136,7 +136,7 @@ namespace ColchoneriaLasCobijas_Proj_MDI
             {
                 bit.user(txtUsuario.Text);
                 bit.insert("Ingreso a la aplicacion de peticion poliza", 1309);
-                frmCuentaBancaria asignacion = new frmCuentaBancaria(txtUsuario.Text, this);
+                frmPeticionPoliza asignacion = new frmPeticionPoliza(txtUsuario.Text, this);
                 asignacion.MdiParent = this;
                 asignacion.Show();
             }
@@ -154,7 +154,7 @@ namespace ColchoneriaLasCobijas_Proj_MDI
             {
                 bit.user(txtUsuario.Text);
                 bit.insert("Ingreso al proceso de Transacciones", 1307);
-                frmCuentaBancaria asignacion = new frmCuentaBancaria(txtUsuario.Text, this);
+                frmTransacciones asignacion = new frmTransacciones();
                 asignacion.MdiParent = this;
                 asignacion.Show();
             }
@@ -173,7 +173,7 @@ namespace ColchoneriaLasCobijas_Proj_MDI
             {
                 bit.user(txtUsuario.Text);
                 bit.insert("Ingreso al reporte de Disponibilidad Diaria", 1308);
-                frmCuentaBancaria asignacion = new frmCuentaBancaria(txtUsuario.Text, this);
+                frmDisponibilidadDiaria asignacion = new frmDisponibilidadDiaria();
                 asignacion.MdiParent = this;
                 asignacion.Show();
             }
