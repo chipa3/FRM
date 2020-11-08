@@ -178,5 +178,25 @@ namespace ColchoneriaLasCobijas_Proj_MDI
         {
             Help.ShowHelp(this, "AyudaBancos/AyudaBancos.chm", "Transacciones.html");
         }
+
+        private void peticionPolizaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            clsVistaBitacora bit = new clsVistaBitacora();
+            clsFuncionesSeguridad seguridad = new clsFuncionesSeguridad();
+
+            if (seguridad.PermisosAcceso("1309", textBox1.Text) == 1)
+            {
+
+                bit.user(textBox1.Text);
+
+                frmPeticionPoliza variable = new frmPeticionPoliza(textBox1.Text, this);
+                variable.MdiParent = this;
+                variable.Show();
+            }
+            else
+            {
+                MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
+            }
+        }
     }
 }

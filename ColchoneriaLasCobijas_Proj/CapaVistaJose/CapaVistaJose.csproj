@@ -78,6 +78,12 @@
     <Compile Include="Mantenimientos\frmMoneda.Designer.cs">
       <DependentUpon>frmMoneda.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimientos\frmPeticionPoliza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frmPeticionPoliza.Designer.cs">
+      <DependentUpon>frmPeticionPoliza.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimientos\frmPropietario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\frmMoneda.resx">
       <DependentUpon>frmMoneda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frmPeticionPoliza.resx">
+      <DependentUpon>frmPeticionPoliza.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\frmPropietario.resx">
       <DependentUpon>frmPropietario.cs</DependentUpon>

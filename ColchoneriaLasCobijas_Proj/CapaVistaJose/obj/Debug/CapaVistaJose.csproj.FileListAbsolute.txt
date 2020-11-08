@@ -87,3 +87,4 @@ C:\Users\jose lopez\Documents\GitHub\FRM\ColchoneriaLasCobijas_Proj\CapaVistaJos
 C:\Users\jose lopez\Documents\GitHub\FRM\ColchoneriaLasCobijas_Proj\CapaVistaJose\obj\Debug\CapaVistaJose.pdb
 C:\Users\jose lopez\Documents\GitHub\FRM\ColchoneriaLasCobijas_Proj\CapaVistaJose\obj\Debug\CapaVistaJose.Mantenimientos.MantenimientosBancos1302.resources
 C:\Users\jose lopez\Documents\GitHub\FRM\ColchoneriaLasCobijas_Proj\CapaVistaJose\obj\Debug\CapaVistaJose.Mantenimientos.frmDisponibilidadDiaria.resources
+C:\Users\jose lopez\Documents\GitHub\FRM\ColchoneriaLasCobijas_Proj\CapaVistaJose\obj\Debug\CapaVistaJose.Mantenimientos.frmPeticionPoliza.resources
