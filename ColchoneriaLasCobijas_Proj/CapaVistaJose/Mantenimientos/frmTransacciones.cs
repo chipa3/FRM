@@ -16,7 +16,8 @@ namespace CapaVistaJose.Mantenimientos
         ClsConexion cn = new ClsConexion();
         int numero = 0;
         int codigoA = 0;
-
+        float SaldoActual;
+        float montoTransaccion, saldoNuevo;
         public frmTransacciones()
         {
             InitializeComponent();
@@ -50,6 +51,27 @@ namespace CapaVistaJose.Mantenimientos
                 MessageBox.Show("Error" + ex);
             }
         }
+
+        void NuevoSaldo()
+        {
+                try
+                {
+                    //se realiza la consulta de insertar en tabla pelicula con sus respectivos campos
+                    string Insertar = "UPDATE cuenta_bancaria set saldo_cuenta_bancaria = " + saldoNuevo + " where pk_id_numero_cuenta_bancaria = " + Int32.Parse(cmbCodigoCuenta.SelectedItem.ToString()) + " ";
+                    OdbcCommand comm = new OdbcCommand(Insertar, cn.conexion());
+                    OdbcDataReader mostrarC = comm.ExecuteReader();
+               //     MessageBox.Show("Los Datos se ingresaron correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("" + ex);
+
+                }
+                
+            } 
+               
+              
 
         void CargarCombos()
         {
@@ -114,6 +136,8 @@ namespace CapaVistaJose.Mantenimientos
         {
 
             cmbCodigoCuenta.Items.Clear();
+            cmbCodigoTransaccion.Items.Clear();
+            cmbCodigoMoneda.Items.Clear();
             cmbTransaccion.Items.Clear();
             txtDescripcion.Text = "";
             cmbMoneda.Items.Clear();
@@ -121,36 +145,66 @@ namespace CapaVistaJose.Mantenimientos
             txtSaldoActual.Text = "";
         }
 
+        void IngresoDeTransaccion()
+        {
+            String Fecha = dtpFecha.Value.ToString("yyyy-MM-dd HH:MM");
+            try
+            {
+                //se realiza la consulta de insertar en tabla pelicula con sus respectivos campos
+                string Insertar = "INSERT INTO TRANSACCION (pk_id_transaccion,fk_id_numero_cuenta_bancaria,fecha_transaccion,fk_id_tipo_transaccion,fk_id_tipo_moneda,monto_transaccion,descripcion_transaccion) " +
+                "VALUES (" + codigoA + "," + Int32.Parse(cmbCodigoCuenta.SelectedItem.ToString()) + ",'" + Fecha + "'," + Int32.Parse(cmbCodigoTransaccion.SelectedItem.ToString()) + ",'" + Int32.Parse(cmbCodigoMoneda.SelectedItem.ToString()) + "', " + txtMonto.Text + ",'" + txtDescripcion.Text + "' )";
+                OdbcCommand comm = new OdbcCommand(Insertar, cn.conexion());
+                OdbcDataReader mostrarC = comm.ExecuteReader();
+                MessageBox.Show("Los Datos se ingresaron correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex);
+
+            }
+            procLimpiar();
+            procCodigoA();
+            CargarCombos();
+            CargarDatos();
+        }
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            int OpcionTransaccion = Int32.Parse(cmbCodigoTransaccion.SelectedItem.ToString());
             //Este if verifica que no se deje ningun campo en blanco, si hay uno en blando muestra el mensaje de que se necesitan llenar los campos
             if (txtDescripcion.Text == "" || txtMonto.Text == "" || cmbCodigoCuenta.SelectedItem == null || cmbTransaccion.SelectedItem == null || cmbMoneda.SelectedItem == null)
             {
                 MessageBox.Show("NO DEBE DEJAR CAMPOS VACIOS", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
-            {
-                String Fecha = dtpFecha.Value.ToString("yyyy-MM-dd HH:MM");
+            { 
+                montoTransaccion = float.Parse(txtMonto.Text.ToString());
 
-                try
+                if (OpcionTransaccion == 1)
                 {
-                    //se realiza la consulta de insertar en tabla pelicula con sus respectivos campos
-                    string Insertar = "INSERT INTO TRANSACCION (pk_id_transaccion,fk_id_numero_cuenta_bancaria,fecha_transaccion,fk_id_tipo_transaccion,fk_id_tipo_moneda,monto_transaccion,descripcion_transaccion) " +
-                    "VALUES (" + codigoA + "," + Int32.Parse(cmbCodigoCuenta.SelectedItem.ToString()) + ",'" + Fecha + "'," + Int32.Parse(cmbCodigoTransaccion.SelectedItem.ToString()) + ",'" + Int32.Parse(cmbCodigoMoneda.SelectedItem.ToString()) + "', " + txtMonto.Text + ",'" + txtDescripcion.Text + "' )";
-                    OdbcCommand comm = new OdbcCommand(Insertar, cn.conexion());
-                    OdbcDataReader mostrarC = comm.ExecuteReader();
-                    MessageBox.Show("Los Datos se ingresaron correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                }
-                catch (Exception ex)
+                    saldoNuevo = SaldoActual + montoTransaccion;
+                    NuevoSaldo();
+                    IngresoDeTransaccion();
+                  
+                }else
+                if (OpcionTransaccion == 2)
                 {
-                    MessageBox.Show("" + ex);
+                   if(SaldoActual < montoTransaccion)
+                    {
+                        MessageBox.Show("El monto del retiro es mayor, al saldo actual de la cuenta. Verifique que el monto este ingresado correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                    }else
+                    {
+                        saldoNuevo = SaldoActual - montoTransaccion;
+                        NuevoSaldo();
+                        IngresoDeTransaccion();
+                      
+                    }
                 }
-                procLimpiar();
-                procCodigoA();
-                CargarCombos();
-                CargarDatos();
+               
+
+               
             }
         }
 
@@ -184,6 +238,7 @@ namespace CapaVistaJose.Mantenimientos
                 while (MostarBanco.Read())
                 {
                     txtSaldoActual.Text = (MostarBanco.GetDouble(4)).ToString();
+                    SaldoActual = float.Parse(txtSaldoActual.Text.ToString());
                 }
             }
             catch (Exception ex)
@@ -202,13 +257,17 @@ namespace CapaVistaJose.Mantenimientos
             cmbCodigoMoneda.SelectedIndex = cmbMoneda.SelectedIndex;
         }
 
+        private void cmbCodigoTransaccion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void txtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (txtDescripcion.Text.Length > 40)
             {
-                MessageBox.Show("No puede ingresar mas de 40 Numeros", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No puede ingresar mas de 40 Caracteres", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtDescripcion.Text = "";
-
             }
         }
     }

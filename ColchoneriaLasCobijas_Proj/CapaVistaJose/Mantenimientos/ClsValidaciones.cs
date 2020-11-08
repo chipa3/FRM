@@ -30,12 +30,12 @@ namespace CapaVistaJose.Mantenimientos
                 else
                 {
                     validar.Handled = true;
-                    MessageBox.Show("Ingrese solo letras");
+                    MessageBox.Show("Ingrese solo letras", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("validacion de letras fallo" + ex);
+                MessageBox.Show("validacion de letras fallo", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -63,7 +63,7 @@ namespace CapaVistaJose.Mantenimientos
                 else
                 {
                     validar.Handled = true;
-                    MessageBox.Show("Ingrese solo numeros");
+                    MessageBox.Show("Ingrese solo numeros", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
@@ -76,7 +76,9 @@ namespace CapaVistaJose.Mantenimientos
         {
             if ((validar.KeyChar >= 32 && validar.KeyChar <= 47) || (validar.KeyChar >= 59 && validar.KeyChar <= 255))
             {
-                MessageBox.Show("Ingrese solo Numeros");
+                MessageBox.Show("Debe ingresar solo Numeros", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                MessageBox.Show("");
                 validar.Handled = true;
                 return;
             }
@@ -88,7 +90,8 @@ namespace CapaVistaJose.Mantenimientos
         {
             if ((validar.KeyChar >= 32 && validar.KeyChar <= 45) || (validar.KeyChar == 47) || (validar.KeyChar >= 58 && validar.KeyChar <= 255))
             {
-                MessageBox.Show("Ingrese solo Numeros");
+                MessageBox.Show("Debe ingresar solo Numeros", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 validar.Handled = true;
                 return;
             }
@@ -100,7 +103,8 @@ namespace CapaVistaJose.Mantenimientos
         {
             if ((validar.KeyChar >= 32 && validar.KeyChar <= 39) || (validar.KeyChar == 42) || (validar.KeyChar == 44) || (validar.KeyChar >= 46 && validar.KeyChar <= 47) || (validar.KeyChar >= 58 && validar.KeyChar <= 255))
             {
-                MessageBox.Show("Ingrese solo Numeros");
+                MessageBox.Show("Debe ingresar solo Numeros", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 validar.Handled = true;
                 return;
             }

@@ -45,7 +45,7 @@
             this.dgvDatos = new System.Windows.Forms.DataGridView();
             this.cmbCodigoMoneda = new System.Windows.Forms.ComboBox();
             this.cmbMoneda = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblSaldoActual = new System.Windows.Forms.Label();
             this.txtSaldoActual = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.SuspendLayout();
@@ -90,6 +90,7 @@
             this.cmbCodigoTransaccion.Size = new System.Drawing.Size(87, 28);
             this.cmbCodigoTransaccion.TabIndex = 30;
             this.cmbCodigoTransaccion.Visible = false;
+            this.cmbCodigoTransaccion.SelectedIndexChanged += new System.EventHandler(this.cmbCodigoTransaccion_SelectedIndexChanged);
             // 
             // cmbTransaccion
             // 
@@ -225,26 +226,24 @@
             this.cmbMoneda.TabIndex = 35;
             this.cmbMoneda.SelectedIndexChanged += new System.EventHandler(this.cmbMoneda_SelectedIndexChanged);
             // 
-            // label2
+            // lblSaldoActual
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(329, 454);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 20);
-            this.label2.TabIndex = 37;
-            this.label2.Text = "Saldo Actual";
-            this.label2.Visible = false;
+            this.lblSaldoActual.AutoSize = true;
+            this.lblSaldoActual.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSaldoActual.Location = new System.Drawing.Point(329, 454);
+            this.lblSaldoActual.Name = "lblSaldoActual";
+            this.lblSaldoActual.Size = new System.Drawing.Size(106, 20);
+            this.lblSaldoActual.TabIndex = 37;
+            this.lblSaldoActual.Text = "Saldo Actual";
             // 
             // txtSaldoActual
             // 
             this.txtSaldoActual.Enabled = false;
             this.txtSaldoActual.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSaldoActual.Location = new System.Drawing.Point(474, 445);
+            this.txtSaldoActual.Location = new System.Drawing.Point(474, 451);
             this.txtSaldoActual.Name = "txtSaldoActual";
             this.txtSaldoActual.Size = new System.Drawing.Size(249, 27);
             this.txtSaldoActual.TabIndex = 38;
-            this.txtSaldoActual.Visible = false;
             // 
             // frmTransacciones
             // 
@@ -253,7 +252,7 @@
             this.BackColor = System.Drawing.Color.Gold;
             this.ClientSize = new System.Drawing.Size(1339, 516);
             this.Controls.Add(this.txtSaldoActual);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblSaldoActual);
             this.Controls.Add(this.cmbCodigoMoneda);
             this.Controls.Add(this.cmbMoneda);
             this.Controls.Add(this.btnGuardar);
@@ -300,7 +299,7 @@
         private System.Windows.Forms.DataGridView dgvDatos;
         private System.Windows.Forms.ComboBox cmbCodigoMoneda;
         private System.Windows.Forms.ComboBox cmbMoneda;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblSaldoActual;
         private System.Windows.Forms.TextBox txtSaldoActual;
     }
 }
