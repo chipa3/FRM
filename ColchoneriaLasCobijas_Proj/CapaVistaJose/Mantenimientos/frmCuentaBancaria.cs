@@ -144,6 +144,7 @@ namespace CapaVistaJose.Mantenimientos
 
         private void txtSueldo_KeyPress(object sender, KeyPressEventArgs e)
         {
+
             ClsValidaciones validar = new ClsValidaciones();
             validar.funcSueldo(e);
 
@@ -152,6 +153,7 @@ namespace CapaVistaJose.Mantenimientos
                 MessageBox.Show("No puede ingresar mas de 20 Caracteres", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtSueldo.Text = "";
             }
+            
         }
 
         private void cmbBanco_SelectedIndexChanged(object sender, EventArgs e)

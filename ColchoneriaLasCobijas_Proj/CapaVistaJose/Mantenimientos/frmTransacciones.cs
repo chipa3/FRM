@@ -60,16 +60,14 @@ namespace CapaVistaJose.Mantenimientos
                     string Insertar = "UPDATE cuenta_bancaria set saldo_cuenta_bancaria = " + saldoNuevo + " where pk_id_numero_cuenta_bancaria = " + Int32.Parse(cmbCodigoCuenta.SelectedItem.ToString()) + " ";
                     OdbcCommand comm = new OdbcCommand(Insertar, cn.conexion());
                     OdbcDataReader mostrarC = comm.ExecuteReader();
-               //     MessageBox.Show("Los Datos se ingresaron correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("" + ex);
+                MessageBox.Show("Registro no valido, intente de nuevo", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                }
-                
-            } 
+            }
+
+        } 
                
               
 
@@ -160,7 +158,8 @@ namespace CapaVistaJose.Mantenimientos
             }
             catch (Exception ex)
             {
-                MessageBox.Show("" + ex);
+                MessageBox.Show("Registro no valido, intente de nuevo", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
 
             }
             procLimpiar();
@@ -179,30 +178,39 @@ namespace CapaVistaJose.Mantenimientos
             }
             else
             { 
-                montoTransaccion = float.Parse(txtMonto.Text.ToString());
-
-                if (OpcionTransaccion == 1)
+                try
                 {
-                    saldoNuevo = SaldoActual + montoTransaccion;
-                    NuevoSaldo();
-                    IngresoDeTransaccion();
-                  
-                }else
-                if (OpcionTransaccion == 2)
-                {
-                   if(SaldoActual < montoTransaccion)
+                    float.Parse(txtMonto.Text.ToString());
+                    montoTransaccion = float.Parse(txtMonto.Text.ToString());
+                    if (OpcionTransaccion == 1)
                     {
-                        MessageBox.Show("El monto del retiro es mayor, al saldo actual de la cuenta. Verifique que el monto este ingresado correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    }else
-                    {
-                        saldoNuevo = SaldoActual - montoTransaccion;
+                        saldoNuevo = SaldoActual + montoTransaccion;
                         NuevoSaldo();
                         IngresoDeTransaccion();
-                      
                     }
+                    else
+                  if (OpcionTransaccion == 2)
+                    {
+                        if (SaldoActual < montoTransaccion)
+                        {
+                            MessageBox.Show("El monto del retiro es mayor, al saldo actual de la cuenta. Verifique que el monto este ingresado correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        }
+                        else
+                        {
+                            saldoNuevo = SaldoActual - montoTransaccion;
+                            NuevoSaldo();
+                            IngresoDeTransaccion();
+                        }
+                    }
+
+
                 }
-               
+                catch (Exception ex)
+                {
+                    MessageBox.Show("El monto ingresado no es valido", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
 
                
             }
@@ -238,7 +246,17 @@ namespace CapaVistaJose.Mantenimientos
                 while (MostarBanco.Read())
                 {
                     txtSaldoActual.Text = (MostarBanco.GetDouble(4)).ToString();
-                    SaldoActual = float.Parse(txtSaldoActual.Text.ToString());
+                    try
+                    {
+                        float.Parse(txtSaldoActual.Text.ToString());
+                        SaldoActual = float.Parse(txtSaldoActual.Text.ToString());
+                    }
+                    catch(Exception ex)
+                    {
+                        MessageBox.Show("Error al obtener el saldo actual de la cuenta bancaria, verifique que el numero almacenado sea valido", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+
                 }
             }
             catch (Exception ex)
