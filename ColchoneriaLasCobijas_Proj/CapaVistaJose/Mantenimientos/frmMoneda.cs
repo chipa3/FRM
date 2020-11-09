@@ -20,6 +20,9 @@ namespace CapaVistaJose.Mantenimientos
             UsuarioAplicacion = usuario;
             navegador1.Usuario = UsuarioAplicacion;
             FormularioPadre = formularioPadre;
+            this.tltAyuda.SetToolTip(this.txtMoneda,"Ingrese el nombre de la moneda.");
+            this.tltAyuda.SetToolTip(this.txtSimbolo, "Ingrese el simbolo de la moneda.");
+            this.tltAyuda.SetToolTip(this.txtDescripcion, "Ingrese una descripcion sobre la moneda.");
         }
 
         private void navegador1_Load(object sender, EventArgs e)
@@ -67,20 +70,22 @@ namespace CapaVistaJose.Mantenimientos
 
         private void txtEstado_TextChanged(object sender, EventArgs e)
         {
+            //si el campo estado esta vacio coloca los 2 radioButons en falso, para que se puedan volver a seleccionar
             if (txtEstado.Text == "")
             {
-                rbEstadoActivo.Checked = false;
-                rbEstadoInactivo.Checked = false;
+                rbtnActivo.Checked = false;
+                rbtnInactivo.Checked = false;
             }
             if (txtEstado.Text == "1")
             {
-                rbEstadoActivo.Checked = true;
+                rbtnActivo.Checked = true;
             }
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            if (rbEstadoActivo.Checked == true)
+            //si se selecciona el radioButon de inactivo, el dato que se reflejara en el campo de texto sera e estado  1
+            if (rbtnActivo.Checked == true)
             {
                 txtEstado.Text = "1";
             }
@@ -88,7 +93,8 @@ namespace CapaVistaJose.Mantenimientos
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            if (rbEstadoInactivo.Checked == true)
+            //si se selecciona el radioButon de inactivo, el dato que se reflejara en el campo de texto sera e estado  0
+            if (rbtnInactivo.Checked == true)
             {
                 txtEstado.Text = "0";
             }
@@ -96,8 +102,10 @@ namespace CapaVistaJose.Mantenimientos
 
         private void txtMoneda_KeyPress(object sender, KeyPressEventArgs e)
         {
+            //se validan que solo se ingresen letras en este campo
             ClsValidaciones Validar = new ClsValidaciones();
             Validar.funcSoloLetras(e);
+            //se validan la cantidad de caracteres que soporta el campo
             if (txtMoneda.Text.Length > 40)
             {
                 MessageBox.Show("No puede ingresar mas de 40 Caracteres", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -109,6 +117,7 @@ namespace CapaVistaJose.Mantenimientos
 
         private void txtSimbolo_KeyPress(object sender, KeyPressEventArgs e)
         {
+            //se validan la cantidad de caracteres que soporta el campo
             if (txtSimbolo.Text.Length > 2)
             {
                 MessageBox.Show("No puede ingresar mas de 2 Caracteres", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -119,6 +128,7 @@ namespace CapaVistaJose.Mantenimientos
 
         private void txtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
         {
+            //se validan la cantidad de caracteres que soporta el campoo
             if (txtDescripcion.Text.Length > 70)
             {
                 MessageBox.Show("No puede ingresar mas de 70 Caracteres", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -40,6 +40,8 @@ namespace CapaVistaJose.Mantenimientos
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
+            /*se llama a la funcion CargarDatos que realiza una consulta donde se obtienen datos especificos de la base de datos
+            para presentarlos en el DataGridView*/
             CargarDatos();
         }
     }

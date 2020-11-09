@@ -23,7 +23,11 @@ namespace CapaVistaJose.Mantenimientos
             navegador1.Usuario = UsuarioAplicacion;
             FormularioPadre = formularioPadre;
             CargarCombos();
-          
+            this.tltAyuda.SetToolTip(this.txtSueldo, "Ingrese el saldo de Actual de la cuenta Bancaria.");
+            this.tltAyuda.SetToolTip(this.dtpFecha, "Seleccione la fecha de apertura de la cuenta Bancaria.");
+            this.tltAyuda.SetToolTip(this.cmbBanco, "Seleccione el banco al cual pertenece la cuenta bancaria, si no aparece el banco, verifique que el banco este guardado, si no esta guardado debe ingresar uno nuevo.");
+            this.tltAyuda.SetToolTip(this.cmbMoneda, "Seleccione el tipo de moneda en el que trabaja la cuenta,si no aparece el tipo de moneda, verifique que la moneda este guardado, si no esta guardado debe ingresar uno nuevo. ");
+            this.tltAyuda.SetToolTip(this.cmbPropietario, "Seleccione el propietario de la cuenta ,si no aparece el propietario, verifique que el propietario este guardado, si no esta guardado debe ingresar uno nuevo.");
         }
 
         void CargarCombos()
@@ -70,20 +74,22 @@ namespace CapaVistaJose.Mantenimientos
 
         private void txtEstado_TextChanged(object sender, EventArgs e)
         {
+            //si el campo estado esta vacio coloca los 2 radioButons en falso, para que se puedan volver a seleccionar
             if (txtEstado.Text == "")
             {
-                rbEstadoActivo.Checked = false;
-                rbEstadoInactivo.Checked = false;
+                rbtnActivo.Checked = false;
+                rbtnInactivo.Checked = false;
             }
             if (txtEstado.Text == "1")
             {
-                rbEstadoActivo.Checked = true;
+                rbtnActivo.Checked = true;
             }
         }
 
         private void rbEstadoActivo_CheckedChanged(object sender, EventArgs e)
         {
-            if (rbEstadoActivo.Checked == true)
+            //si se selecciona el radioButon de inactivo, el dato que se reflejara en el campo de texto sera e estado  1
+            if (rbtnActivo.Checked == true)
             {
                 txtEstado.Text = "1";
             }
@@ -91,7 +97,8 @@ namespace CapaVistaJose.Mantenimientos
 
         private void rbEstadoInactivo_CheckedChanged(object sender, EventArgs e)
         {
-            if (rbEstadoInactivo.Checked == true)
+            //si se selecciona el radioButon de inactivo, el dato que se reflejara en el campo de texto sera e estado  0
+            if (rbtnInactivo.Checked == true)
             {
                 txtEstado.Text = "0";
             }
@@ -134,7 +141,7 @@ namespace CapaVistaJose.Mantenimientos
             navegador1.control = lista;
             navegador1.formulario = this;
             //el dataGridView1 se debe cambiar por el que se tiene en el formulario
-            navegador1.DatosActualizar = dvgDatos;
+            navegador1.DatosActualizar = dgvDatos;
             navegador1.procActualizarData();
             navegador1.procCargar();
             //en la variable ayuda ruta debe colocar la carpeta y el archivo.chm de su proyecto de ayuda
@@ -144,10 +151,10 @@ namespace CapaVistaJose.Mantenimientos
 
         private void txtSueldo_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            //se validan que solo se puedan ingresar numeros con puntos, para simular un numero con punto decimal
             ClsValidaciones validar = new ClsValidaciones();
             validar.funcSueldo(e);
-
+            //se validan la cantidad de caracteres que soporta el campo
             if(txtSueldo.Text.Length > 20)
             {
                 MessageBox.Show("No puede ingresar mas de 20 Caracteres", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -195,6 +202,15 @@ namespace CapaVistaJose.Mantenimientos
         private void frmCuentaBancaria_FormClosed(object sender, FormClosedEventArgs e)
         {
         
+        }
+
+        private void dtpFecha_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (dtpFecha.Value.Date < DateTime.Now.Date)
+            {
+                MessageBox.Show("La fecha no puede ser mayor a la fecha de Hoy.", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
         }
     }
 }

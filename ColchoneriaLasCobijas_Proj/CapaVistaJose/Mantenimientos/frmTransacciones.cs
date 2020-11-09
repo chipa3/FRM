@@ -24,8 +24,17 @@ namespace CapaVistaJose.Mantenimientos
             procCodigoA();
             CargarCombos();
             CargarDatos();
-        }
 
+            this.tltAyuda.SetToolTip(this.txtMonto, "Ingrese el monto de la transaccion.");
+            this.tltAyuda.SetToolTip(this.txtSaldoActual, "saldo actual de la cuenta bancaria.");
+            this.tltAyuda.SetToolTip(this.txtDescripcion, "Ingrese una descripcion sobre la transaccion que se va a realizar.");
+            this.tltAyuda.SetToolTip(this.dtpFecha, "Seleccione la fecha de la transaccion.");
+            this.tltAyuda.SetToolTip(this.cmbCodigoCuenta, "Seleccione una cuenta bancaria, si no aparece la cuenta bancaria, verifique que la cuenta este guardado, si no esta guardado debe ingresar uno nuevo.");
+            this.tltAyuda.SetToolTip(this.cmbMoneda, "Seleccione el tipo de moneda en el que trabaja la cuenta,si no aparece el tipo de moneda, verifique que la moneda este guardado, si no esta guardado debe ingresar uno nuevo. ");
+            this.tltAyuda.SetToolTip(this.cmbTransaccion, "Seleccione el tipo de transaccion ,si no aparece tipo de transaccion, verifique que tipo de transaccion este guardado, si no esta guardado debe ingresar uno nuevo.");
+
+        }
+        //funcion que realiza el codigo automatico para almacenar los datos en la base de datos
         void procCodigoA()
         {
             try
@@ -51,7 +60,7 @@ namespace CapaVistaJose.Mantenimientos
                 MessageBox.Show("Error" + ex);
             }
         }
-
+        //funcion que actualiza el saldo en la tabla cuenta despues de realizar una transaccion
         void NuevoSaldo()
         {
                 try
@@ -68,9 +77,8 @@ namespace CapaVistaJose.Mantenimientos
             }
 
         } 
-               
-              
-
+                          
+        //funcion para cargar los datos de la base de datos a los combo Box
         void CargarCombos()
         {
             try
@@ -111,7 +119,7 @@ namespace CapaVistaJose.Mantenimientos
             }
         }
 
-
+        //funcion para cargar los datos en el dataGridView
         void CargarDatos()
         {
             //procedimiento que carga los datos al dataGridView
@@ -133,6 +141,7 @@ namespace CapaVistaJose.Mantenimientos
         void procLimpiar()
         {
 
+            //funcion para limpiar los controles del formulario 
             cmbCodigoCuenta.Items.Clear();
             cmbCodigoTransaccion.Items.Clear();
             cmbCodigoMoneda.Items.Clear();
@@ -145,6 +154,7 @@ namespace CapaVistaJose.Mantenimientos
 
         void IngresoDeTransaccion()
         {
+            //esta funcion es llamada en el boton de guardar, y esta funcion realiza la consulta donde se almacenan los datos en la base de datos
             String Fecha = dtpFecha.Value.ToString("yyyy-MM-dd HH:MM");
             try
             {
@@ -202,9 +212,10 @@ namespace CapaVistaJose.Mantenimientos
                             NuevoSaldo();
                             IngresoDeTransaccion();
                         }
+                    }else if(OpcionTransaccion != 1 || OpcionTransaccion != 2)
+                    {
+                        MessageBox.Show("Verifique que la operacion sea una RETIRO O UN DEPOSITO.", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-
-
                 }
                 catch (Exception ex)
                 {
@@ -223,8 +234,10 @@ namespace CapaVistaJose.Mantenimientos
 
         private void txtMonto_KeyPress(object sender, KeyPressEventArgs e)
         {
+            //se validan que solo se ingresen numeros enteros o numeros con punto decimal
             ClsValidaciones VALIDAR = new ClsValidaciones();
             VALIDAR.funcSueldo(e);
+            //se validan la cantidad de caracteres que soporta el campo
             if (txtMonto.Text.Length > 20)
             {
                 MessageBox.Show("No puede ingresar mas de 20 Numeros", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -248,6 +261,7 @@ namespace CapaVistaJose.Mantenimientos
                     txtSaldoActual.Text = (MostarBanco.GetDouble(4)).ToString();
                     try
                     {
+                        //al obetener el saldo actual de la cuenta se verifica si se puede convertir a un tipo float, si no se puede convertir el saldo esta almacenado incorrectamente
                         float.Parse(txtSaldoActual.Text.ToString());
                         SaldoActual = float.Parse(txtSaldoActual.Text.ToString());
                     }
@@ -282,6 +296,7 @@ namespace CapaVistaJose.Mantenimientos
 
         private void txtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
         {
+            //se validan la cantidad de caracteres que soporta el campo
             if (txtDescripcion.Text.Length > 40)
             {
                 MessageBox.Show("No puede ingresar mas de 40 Caracteres", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);

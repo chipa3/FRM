@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblEstado = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblTransaccion = new System.Windows.Forms.Label();
@@ -37,9 +38,10 @@
             this.txtTransaccion = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.navegador1 = new CapaVistaNavegador.Navegador();
-            this.rbEstadoActivo = new System.Windows.Forms.RadioButton();
-            this.rbEstadoInactivo = new System.Windows.Forms.RadioButton();
+            this.rbtnActivo = new System.Windows.Forms.RadioButton();
+            this.rbtnInactivo = new System.Windows.Forms.RadioButton();
             this.txtEstado = new System.Windows.Forms.TextBox();
+            this.tltAyuda = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,6 +103,7 @@
             this.txtDescripcion.Location = new System.Drawing.Point(181, 264);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtDescripcion.Size = new System.Drawing.Size(314, 110);
             this.txtDescripcion.TabIndex = 22;
             this.txtDescripcion.Tag = "descripcion_tipo_transaccion";
@@ -136,31 +139,31 @@
             this.navegador1.TabIndex = 19;
             this.navegador1.Load += new System.EventHandler(this.navegador1_Load);
             // 
-            // rbEstadoActivo
+            // rbtnActivo
             // 
-            this.rbEstadoActivo.AutoSize = true;
-            this.rbEstadoActivo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbEstadoActivo.Location = new System.Drawing.Point(181, 383);
-            this.rbEstadoActivo.Name = "rbEstadoActivo";
-            this.rbEstadoActivo.Size = new System.Drawing.Size(80, 24);
-            this.rbEstadoActivo.TabIndex = 29;
-            this.rbEstadoActivo.TabStop = true;
-            this.rbEstadoActivo.Text = "Activo";
-            this.rbEstadoActivo.UseVisualStyleBackColor = true;
-            this.rbEstadoActivo.CheckedChanged += new System.EventHandler(this.rbEstadoActivo_CheckedChanged);
+            this.rbtnActivo.AutoSize = true;
+            this.rbtnActivo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnActivo.Location = new System.Drawing.Point(181, 383);
+            this.rbtnActivo.Name = "rbtnActivo";
+            this.rbtnActivo.Size = new System.Drawing.Size(80, 24);
+            this.rbtnActivo.TabIndex = 29;
+            this.rbtnActivo.TabStop = true;
+            this.rbtnActivo.Text = "Activo";
+            this.rbtnActivo.UseVisualStyleBackColor = true;
+            this.rbtnActivo.CheckedChanged += new System.EventHandler(this.rbEstadoActivo_CheckedChanged);
             // 
-            // rbEstadoInactivo
+            // rbtnInactivo
             // 
-            this.rbEstadoInactivo.AutoSize = true;
-            this.rbEstadoInactivo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbEstadoInactivo.Location = new System.Drawing.Point(297, 383);
-            this.rbEstadoInactivo.Name = "rbEstadoInactivo";
-            this.rbEstadoInactivo.Size = new System.Drawing.Size(92, 24);
-            this.rbEstadoInactivo.TabIndex = 30;
-            this.rbEstadoInactivo.TabStop = true;
-            this.rbEstadoInactivo.Text = "Inactivo";
-            this.rbEstadoInactivo.UseVisualStyleBackColor = true;
-            this.rbEstadoInactivo.CheckedChanged += new System.EventHandler(this.rbEstadoInactivo_CheckedChanged);
+            this.rbtnInactivo.AutoSize = true;
+            this.rbtnInactivo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnInactivo.Location = new System.Drawing.Point(297, 383);
+            this.rbtnInactivo.Name = "rbtnInactivo";
+            this.rbtnInactivo.Size = new System.Drawing.Size(92, 24);
+            this.rbtnInactivo.TabIndex = 30;
+            this.rbtnInactivo.TabStop = true;
+            this.rbtnInactivo.Text = "Inactivo";
+            this.rbtnInactivo.UseVisualStyleBackColor = true;
+            this.rbtnInactivo.CheckedChanged += new System.EventHandler(this.rbEstadoInactivo_CheckedChanged);
             // 
             // txtEstado
             // 
@@ -180,8 +183,8 @@
             this.BackColor = System.Drawing.Color.Gold;
             this.ClientSize = new System.Drawing.Size(1442, 450);
             this.Controls.Add(this.txtEstado);
-            this.Controls.Add(this.rbEstadoInactivo);
-            this.Controls.Add(this.rbEstadoActivo);
+            this.Controls.Add(this.rbtnInactivo);
+            this.Controls.Add(this.rbtnActivo);
             this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblTransaccion);
@@ -212,8 +215,9 @@
         private System.Windows.Forms.TextBox txtTransaccion;
         private System.Windows.Forms.TextBox txtCodigo;
         private CapaVistaNavegador.Navegador navegador1;
-        private System.Windows.Forms.RadioButton rbEstadoActivo;
-        private System.Windows.Forms.RadioButton rbEstadoInactivo;
+        private System.Windows.Forms.RadioButton rbtnActivo;
+        private System.Windows.Forms.RadioButton rbtnInactivo;
         private System.Windows.Forms.TextBox txtEstado;
+        private System.Windows.Forms.ToolTip tltAyuda;
     }
 }

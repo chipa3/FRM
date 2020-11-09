@@ -28,17 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblEstado = new System.Windows.Forms.Label();
             this.lblBanco = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
-            this.dvgDatos = new System.Windows.Forms.DataGridView();
+            this.dgvDatos = new System.Windows.Forms.DataGridView();
             this.txtBanco = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.navegador1 = new CapaVistaNavegador.Navegador();
             this.txtEstado = new System.Windows.Forms.TextBox();
-            this.rbEstadoActivo = new System.Windows.Forms.RadioButton();
-            this.rbEstadoInactivo = new System.Windows.Forms.RadioButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dvgDatos)).BeginInit();
+            this.rbtnActivo = new System.Windows.Forms.RadioButton();
+            this.rbtnInactivo = new System.Windows.Forms.RadioButton();
+            this.tltAyuda = new System.Windows.Forms.ToolTip(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.SuspendLayout();
             // 
             // lblEstado
@@ -71,17 +73,17 @@
             this.lblCodigo.TabIndex = 20;
             this.lblCodigo.Text = "CODIGO";
             // 
-            // dvgDatos
+            // dgvDatos
             // 
-            this.dvgDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgDatos.Location = new System.Drawing.Point(494, 149);
-            this.dvgDatos.Name = "dvgDatos";
-            this.dvgDatos.ReadOnly = true;
-            this.dvgDatos.RowHeadersWidth = 51;
-            this.dvgDatos.RowTemplate.Height = 24;
-            this.dvgDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dvgDatos.Size = new System.Drawing.Size(713, 178);
-            this.dvgDatos.TabIndex = 19;
+            this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDatos.Location = new System.Drawing.Point(494, 149);
+            this.dgvDatos.Name = "dgvDatos";
+            this.dgvDatos.ReadOnly = true;
+            this.dgvDatos.RowHeadersWidth = 51;
+            this.dgvDatos.RowTemplate.Height = 24;
+            this.dgvDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDatos.Size = new System.Drawing.Size(713, 178);
+            this.dgvDatos.TabIndex = 19;
             // 
             // txtBanco
             // 
@@ -107,7 +109,7 @@
             // 
             this.navegador1.BackColor = System.Drawing.Color.Transparent;
             this.navegador1.Location = new System.Drawing.Point(13, 13);
-            this.navegador1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.navegador1.Margin = new System.Windows.Forms.Padding(4);
             this.navegador1.Name = "navegador1";
             this.navegador1.Size = new System.Drawing.Size(1412, 129);
             this.navegador1.TabIndex = 15;
@@ -124,31 +126,31 @@
             this.txtEstado.Visible = false;
             this.txtEstado.TextChanged += new System.EventHandler(this.txtEstado_TextChanged);
             // 
-            // rbEstadoActivo
+            // rbtnActivo
             // 
-            this.rbEstadoActivo.AutoSize = true;
-            this.rbEstadoActivo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbEstadoActivo.Location = new System.Drawing.Point(170, 301);
-            this.rbEstadoActivo.Name = "rbEstadoActivo";
-            this.rbEstadoActivo.Size = new System.Drawing.Size(80, 24);
-            this.rbEstadoActivo.TabIndex = 24;
-            this.rbEstadoActivo.TabStop = true;
-            this.rbEstadoActivo.Text = "Activo";
-            this.rbEstadoActivo.UseVisualStyleBackColor = true;
-            this.rbEstadoActivo.CheckedChanged += new System.EventHandler(this.rbEstadoActivo_CheckedChanged);
+            this.rbtnActivo.AutoSize = true;
+            this.rbtnActivo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnActivo.Location = new System.Drawing.Point(170, 301);
+            this.rbtnActivo.Name = "rbtnActivo";
+            this.rbtnActivo.Size = new System.Drawing.Size(80, 24);
+            this.rbtnActivo.TabIndex = 24;
+            this.rbtnActivo.TabStop = true;
+            this.rbtnActivo.Text = "Activo";
+            this.rbtnActivo.UseVisualStyleBackColor = true;
+            this.rbtnActivo.CheckedChanged += new System.EventHandler(this.rbEstadoActivo_CheckedChanged);
             // 
-            // rbEstadoInactivo
+            // rbtnInactivo
             // 
-            this.rbEstadoInactivo.AutoSize = true;
-            this.rbEstadoInactivo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbEstadoInactivo.Location = new System.Drawing.Point(289, 301);
-            this.rbEstadoInactivo.Name = "rbEstadoInactivo";
-            this.rbEstadoInactivo.Size = new System.Drawing.Size(92, 24);
-            this.rbEstadoInactivo.TabIndex = 25;
-            this.rbEstadoInactivo.TabStop = true;
-            this.rbEstadoInactivo.Text = "Inactivo";
-            this.rbEstadoInactivo.UseVisualStyleBackColor = true;
-            this.rbEstadoInactivo.CheckedChanged += new System.EventHandler(this.rbEstadoInactivo_CheckedChanged);
+            this.rbtnInactivo.AutoSize = true;
+            this.rbtnInactivo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnInactivo.Location = new System.Drawing.Point(289, 301);
+            this.rbtnInactivo.Name = "rbtnInactivo";
+            this.rbtnInactivo.Size = new System.Drawing.Size(92, 24);
+            this.rbtnInactivo.TabIndex = 25;
+            this.rbtnInactivo.TabStop = true;
+            this.rbtnInactivo.Text = "Inactivo";
+            this.rbtnInactivo.UseVisualStyleBackColor = true;
+            this.rbtnInactivo.CheckedChanged += new System.EventHandler(this.rbEstadoInactivo_CheckedChanged);
             // 
             // MantenimientosBancos1302
             // 
@@ -156,13 +158,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gold;
             this.ClientSize = new System.Drawing.Size(1433, 371);
-            this.Controls.Add(this.rbEstadoInactivo);
-            this.Controls.Add(this.rbEstadoActivo);
+            this.Controls.Add(this.rbtnInactivo);
+            this.Controls.Add(this.rbtnActivo);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.lblBanco);
             this.Controls.Add(this.lblCodigo);
-            this.Controls.Add(this.dvgDatos);
+            this.Controls.Add(this.dgvDatos);
             this.Controls.Add(this.txtBanco);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.navegador1);
@@ -170,7 +172,7 @@
             this.MinimizeBox = false;
             this.Name = "MantenimientosBancos1302";
             this.Text = "Mantenimientos-Bancos-1302";
-            ((System.ComponentModel.ISupportInitialize)(this.dvgDatos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,12 +183,13 @@
         private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.Label lblBanco;
         private System.Windows.Forms.Label lblCodigo;
-        private System.Windows.Forms.DataGridView dvgDatos;
+        private System.Windows.Forms.DataGridView dgvDatos;
         private System.Windows.Forms.TextBox txtBanco;
         private System.Windows.Forms.TextBox txtCodigo;
         private CapaVistaNavegador.Navegador navegador1;
         private System.Windows.Forms.TextBox txtEstado;
-        private System.Windows.Forms.RadioButton rbEstadoActivo;
-        private System.Windows.Forms.RadioButton rbEstadoInactivo;
+        private System.Windows.Forms.RadioButton rbtnActivo;
+        private System.Windows.Forms.RadioButton rbtnInactivo;
+        private System.Windows.Forms.ToolTip tltAyuda;
     }
 }

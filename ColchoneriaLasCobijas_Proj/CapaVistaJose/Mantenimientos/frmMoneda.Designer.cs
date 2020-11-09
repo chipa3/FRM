@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtEstado = new System.Windows.Forms.TextBox();
-            this.rbEstadoInactivo = new System.Windows.Forms.RadioButton();
-            this.rbEstadoActivo = new System.Windows.Forms.RadioButton();
+            this.rbtnInactivo = new System.Windows.Forms.RadioButton();
+            this.rbtnActivo = new System.Windows.Forms.RadioButton();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
             this.lblEstado = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
@@ -42,13 +43,14 @@
             this.txtMoneda = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.navegador1 = new CapaVistaNavegador.Navegador();
+            this.tltAyuda = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.SuspendLayout();
             // 
             // txtEstado
             // 
             this.txtEstado.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEstado.Location = new System.Drawing.Point(517, 410);
+            this.txtEstado.Location = new System.Drawing.Point(517, 412);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(67, 27);
             this.txtEstado.TabIndex = 40;
@@ -56,31 +58,31 @@
             this.txtEstado.Visible = false;
             this.txtEstado.TextChanged += new System.EventHandler(this.txtEstado_TextChanged);
             // 
-            // rbEstadoInactivo
+            // rbtnInactivo
             // 
-            this.rbEstadoInactivo.AutoSize = true;
-            this.rbEstadoInactivo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbEstadoInactivo.Location = new System.Drawing.Point(327, 417);
-            this.rbEstadoInactivo.Name = "rbEstadoInactivo";
-            this.rbEstadoInactivo.Size = new System.Drawing.Size(92, 24);
-            this.rbEstadoInactivo.TabIndex = 39;
-            this.rbEstadoInactivo.TabStop = true;
-            this.rbEstadoInactivo.Text = "Inactivo";
-            this.rbEstadoInactivo.UseVisualStyleBackColor = true;
-            this.rbEstadoInactivo.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.rbtnInactivo.AutoSize = true;
+            this.rbtnInactivo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnInactivo.Location = new System.Drawing.Point(327, 417);
+            this.rbtnInactivo.Name = "rbtnInactivo";
+            this.rbtnInactivo.Size = new System.Drawing.Size(92, 24);
+            this.rbtnInactivo.TabIndex = 39;
+            this.rbtnInactivo.TabStop = true;
+            this.rbtnInactivo.Text = "Inactivo";
+            this.rbtnInactivo.UseVisualStyleBackColor = true;
+            this.rbtnInactivo.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
-            // rbEstadoActivo
+            // rbtnActivo
             // 
-            this.rbEstadoActivo.AutoSize = true;
-            this.rbEstadoActivo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbEstadoActivo.Location = new System.Drawing.Point(209, 417);
-            this.rbEstadoActivo.Name = "rbEstadoActivo";
-            this.rbEstadoActivo.Size = new System.Drawing.Size(80, 24);
-            this.rbEstadoActivo.TabIndex = 38;
-            this.rbEstadoActivo.TabStop = true;
-            this.rbEstadoActivo.Text = "Activo";
-            this.rbEstadoActivo.UseVisualStyleBackColor = true;
-            this.rbEstadoActivo.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.rbtnActivo.AutoSize = true;
+            this.rbtnActivo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnActivo.Location = new System.Drawing.Point(209, 417);
+            this.rbtnActivo.Name = "rbtnActivo";
+            this.rbtnActivo.Size = new System.Drawing.Size(80, 24);
+            this.rbtnActivo.TabIndex = 38;
+            this.rbtnActivo.TabStop = true;
+            this.rbtnActivo.Text = "Activo";
+            this.rbtnActivo.UseVisualStyleBackColor = true;
+            this.rbtnActivo.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // dgvDatos
             // 
@@ -150,6 +152,7 @@
             this.txtDescripcion.Location = new System.Drawing.Point(209, 285);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtDescripcion.Size = new System.Drawing.Size(375, 116);
             this.txtDescripcion.TabIndex = 30;
             this.txtDescripcion.Tag = "descripcion_tipo_moneda";
@@ -199,10 +202,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gold;
-            this.ClientSize = new System.Drawing.Size(1435, 463);
+            this.ClientSize = new System.Drawing.Size(1435, 470);
             this.Controls.Add(this.txtEstado);
-            this.Controls.Add(this.rbEstadoInactivo);
-            this.Controls.Add(this.rbEstadoActivo);
+            this.Controls.Add(this.rbtnInactivo);
+            this.Controls.Add(this.rbtnActivo);
             this.Controls.Add(this.dgvDatos);
             this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.lblDescripcion);
@@ -227,8 +230,8 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtEstado;
-        private System.Windows.Forms.RadioButton rbEstadoInactivo;
-        private System.Windows.Forms.RadioButton rbEstadoActivo;
+        private System.Windows.Forms.RadioButton rbtnInactivo;
+        private System.Windows.Forms.RadioButton rbtnActivo;
         private System.Windows.Forms.DataGridView dgvDatos;
         private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.Label lblDescripcion;
@@ -240,5 +243,6 @@
         private System.Windows.Forms.TextBox txtMoneda;
         private System.Windows.Forms.TextBox txtCodigo;
         private CapaVistaNavegador.Navegador navegador1;
+        private System.Windows.Forms.ToolTip tltAyuda;
     }
 }

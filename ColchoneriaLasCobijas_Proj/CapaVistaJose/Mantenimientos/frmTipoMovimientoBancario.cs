@@ -20,11 +20,14 @@ namespace CapaVistaJose.Mantenimientos
             UsuarioAplicacion = usuario;
             navegador1.Usuario = UsuarioAplicacion;
             FormularioPadre = formularioPadre;
+            this.tltAyuda.SetToolTip(this.txtTransaccion, "Ingrese el nombre de la transaccion bancaria.");
+            this.tltAyuda.SetToolTip(this.txtDescripcion, "Ingrese una descripcion sobre la transaccion bancaria.");
         }
 
         private void rbEstadoActivo_CheckedChanged(object sender, EventArgs e)
         {
-            if (rbEstadoActivo.Checked == true)
+            //si se selecciona el radioButon de inactivo, el dato que se reflejara en el campo de texto sera e estado  1
+            if (rbtnActivo.Checked == true)
             {
                 txtEstado.Text = "1";
             }
@@ -32,7 +35,8 @@ namespace CapaVistaJose.Mantenimientos
 
         private void rbEstadoInactivo_CheckedChanged(object sender, EventArgs e)
         {
-            if (rbEstadoInactivo.Checked == true)
+            //si se selecciona el radioButon de inactivo, el dato que se reflejara en el campo de texto sera e estado  0
+            if (rbtnInactivo.Checked == true)
             {
                 txtEstado.Text = "0";
             }
@@ -40,14 +44,15 @@ namespace CapaVistaJose.Mantenimientos
 
         private void txtEstado_TextChanged(object sender, EventArgs e)
         {
+            //si el campo estado esta vacio coloca los 2 radioButons en falso, para que se puedan volver a seleccionar
             if (txtEstado.Text == "")
             {
-                rbEstadoActivo.Checked = false;
-                rbEstadoInactivo.Checked = false;
+                rbtnActivo.Checked = false;
+                rbtnInactivo.Checked = false;
             }
             if (txtEstado.Text == "1")
             {
-                rbEstadoActivo.Checked = true;
+                rbtnActivo.Checked = true;
             }
         }
 
@@ -96,9 +101,10 @@ namespace CapaVistaJose.Mantenimientos
 
         private void txtTransaccion_KeyPress(object sender, KeyPressEventArgs e)
         {
+            //se validan que solo se ingresen letras en este campo
             ClsValidaciones validar = new ClsValidaciones();
             validar.funcSoloLetras(e);
-
+            //se validan la cantidad de caracteres que soporta el campo
             if (txtTransaccion.Text.Length > 45)
             {
                 MessageBox.Show("No puede ingresar mas de 45 Caracteres", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -108,6 +114,7 @@ namespace CapaVistaJose.Mantenimientos
 
         private void txtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
         {
+            //se validan la cantidad de caracteres que soporta el campo
             if (txtDescripcion.Text.Length > 75)
             {
                 MessageBox.Show("No puede ingresar mas de 75 Caracteres", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);

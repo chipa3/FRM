@@ -23,6 +23,10 @@ namespace CapaVistaJose.Mantenimientos
             UsuarioAplicacion = usuario;
             navegador1.Usuario = UsuarioAplicacion;
             FormularioPadre = formularioPadre;
+            this.tltAyuda.SetToolTip(this.txtConcepto, "Ingrese el concepto de la poliza.");
+            this.tltAyuda.SetToolTip(this.txtDescripcion, "Ingrese una descripcion sobre la poliza.");
+            this.tltAyuda.SetToolTip(this.txtMonto, "Ingrese el monto de la poliza.");
+            this.tltAyuda.SetToolTip(this.dtpFecha, "Seleccione una fecha que no sea superior a la de hoy.");
         }
 
         private void navegador1_Load(object sender, EventArgs e)
@@ -64,20 +68,22 @@ namespace CapaVistaJose.Mantenimientos
 
         private void txtEstado_TextChanged(object sender, EventArgs e)
         {
+            //si el campo estado esta vacio coloca los 2 radioButons en falso, para que se puedan volver a seleccionar
             if (txtEstado.Text == "")
             {
-                rdbActivo.Checked = false;
-                rdbInactivo.Checked = false;
+                rbtnActivo.Checked = false;
+                rbtnInactivo.Checked = false;
             }
             if (txtEstado.Text == "1")
             {
-                rdbActivo.Checked = true;
+                rbtnActivo.Checked = true;
             }
         }
 
         private void rdbActivo_CheckedChanged(object sender, EventArgs e)
         {
-            if (rdbActivo.Checked == true)
+            //si se selecciona el radioButon de inactivo, el dato que se reflejara en el campo de texto sera e estado  1
+            if (rbtnActivo.Checked == true)
             {
                 txtEstado.Text = "1";
             }
@@ -85,7 +91,8 @@ namespace CapaVistaJose.Mantenimientos
 
         private void rdbInactivo_CheckedChanged(object sender, EventArgs e)
         {
-            if (rdbInactivo.Checked == true)
+            //si se selecciona el radioButon de inactivo, el dato que se reflejara en el campo de texto sera e estado  0
+            if (rbtnInactivo.Checked == true)
             {
                 txtEstado.Text = "0";
             }
@@ -98,7 +105,8 @@ namespace CapaVistaJose.Mantenimientos
 
         private void txtConcepto_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(txtConcepto.Text.Length > 30)
+            //se validan la cantidad de caracteres que soporta el campo
+            if (txtConcepto.Text.Length > 30)
             {
                 MessageBox.Show("No puede ingresar mas de 30 Caracteres", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtConcepto.Text = "";
@@ -107,6 +115,7 @@ namespace CapaVistaJose.Mantenimientos
 
         private void txtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
         {
+            //se validan la cantidad de caracteres que soporta el campo
             if (txtDescripcion.Text.Length > 100)
             {
                 MessageBox.Show("No puede ingresar mas de 100 Caracteres", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -116,12 +125,23 @@ namespace CapaVistaJose.Mantenimientos
 
         private void txtMonto_KeyPress(object sender, KeyPressEventArgs e)
         {
-            validar.funcSueldo(e); 
+            //se validan que solo se ingresen numeros enteros o numeros con punto decimal
+            validar.funcSueldo(e);
+            //se validan la cantidad de caracteres que soporta el campo
             if (txtMonto.Text.Length > 12)
             {
                 MessageBox.Show("No puede ingresar mas de 12 Caracteres", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtMonto.Text = "";
             }
+        }
+
+        private void dtpFecha_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (dtpFecha.Value.Date < DateTime.Now.Date)
+            {
+                MessageBox.Show("La fecha no puede ser mayor a la fecha de Hoy.", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
         }
     }
 }

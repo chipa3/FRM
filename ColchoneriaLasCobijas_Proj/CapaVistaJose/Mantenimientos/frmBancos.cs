@@ -21,11 +21,13 @@ namespace CapaVistaJose.Mantenimientos
             UsuarioAplicacion = usuario;
             navegador1.Usuario = UsuarioAplicacion;
             FormularioPadre = formularioPadre;
+            this.tltAyuda.SetToolTip(this.txtBanco,"Ingrese el nombre del Banco.");
         }
 
         private void rbEstadoInactivo_CheckedChanged(object sender, EventArgs e)
         {
-            if (rbEstadoInactivo.Checked == true)
+            //si se selecciona el radioButon de inactivo, el dato que se reflejara en el campo de texto sera e estado  0
+            if (rbtnInactivo.Checked == true)
             {
                 txtEstado.Text = "0";
             }
@@ -33,7 +35,9 @@ namespace CapaVistaJose.Mantenimientos
 
         private void rbEstadoActivo_CheckedChanged(object sender, EventArgs e)
         {
-            if (rbEstadoActivo.Checked == true)
+            //si se selecciona el radioButon de inactivo, el dato que se reflejara en el campo de texto sera e estado  1
+
+            if (rbtnActivo.Checked == true)
             {
                 txtEstado.Text = "1";
             }
@@ -41,14 +45,15 @@ namespace CapaVistaJose.Mantenimientos
 
         private void txtEstado_TextChanged(object sender, EventArgs e)
         {
+            //si el campo estado esta vacio coloca los 2 radioButons en falso, para que se puedan volver a seleccionar
             if (txtEstado.Text == "")
             {
-                rbEstadoActivo.Checked = false;
-                rbEstadoInactivo.Checked = false;
+                rbtnActivo.Checked = false;
+                rbtnInactivo.Checked = false;
             }
             if (txtEstado.Text == "1")
             {
-                rbEstadoActivo.Checked = true;
+                rbtnActivo.Checked = true;
             }
         }
 
@@ -82,7 +87,7 @@ namespace CapaVistaJose.Mantenimientos
             }
             navegador1.control = lista;
             navegador1.formulario = this;
-            navegador1.DatosActualizar = dvgDatos;
+            navegador1.DatosActualizar = dgvDatos;
             navegador1.procActualizarData();
             navegador1.procCargar();
             navegador1.ayudaRuta = "AyudaBancos/AyudaBancos.chm";
@@ -91,8 +96,10 @@ namespace CapaVistaJose.Mantenimientos
 
         private void txtBanco_KeyPress(object sender, KeyPressEventArgs e)
         {
+            //se validan de que solo se puedan ingresar letras en este campo
             ClsValidaciones Validar = new ClsValidaciones();
             Validar.funcSoloLetras(e);
+            //se valida la cantidad de caracteres que puede ingresar en el campo
             if (txtBanco.Text.Length > 40)
             {
                 MessageBox.Show("No puede ingresar mas de 40 Caracteres", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);  

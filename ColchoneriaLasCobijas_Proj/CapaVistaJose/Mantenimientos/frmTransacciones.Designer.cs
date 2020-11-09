@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.txtMonto = new System.Windows.Forms.TextBox();
@@ -41,12 +42,13 @@
             this.lblTipoTransaccion = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblCuenta = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
             this.cmbCodigoMoneda = new System.Windows.Forms.ComboBox();
             this.cmbMoneda = new System.Windows.Forms.ComboBox();
             this.lblSaldoActual = new System.Windows.Forms.Label();
             this.txtSaldoActual = new System.Windows.Forms.TextBox();
+            this.tltAyuda = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,6 +69,7 @@
             this.txtDescripcion.Location = new System.Drawing.Point(890, 106);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtDescripcion.Size = new System.Drawing.Size(425, 143);
             this.txtDescripcion.TabIndex = 33;
             this.txtDescripcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescripcion_KeyPress);
@@ -182,15 +185,15 @@
             this.lblCuenta.TabIndex = 20;
             this.lblCuenta.Text = "CUENTA BANCARIA";
             // 
-            // label1
+            // lblTitulo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Rockwell", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(501, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(248, 31);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "TRANSACCIONES";
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Rockwell", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(501, 18);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(248, 31);
+            this.lblTitulo.TabIndex = 19;
+            this.lblTitulo.Text = "TRANSACCIONES";
             // 
             // dgvDatos
             // 
@@ -268,7 +271,7 @@
             this.Controls.Add(this.lblTipoTransaccion);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblCuenta);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.dgvDatos);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -295,11 +298,12 @@
         private System.Windows.Forms.Label lblTipoTransaccion;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblCuenta;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.DataGridView dgvDatos;
         private System.Windows.Forms.ComboBox cmbCodigoMoneda;
         private System.Windows.Forms.ComboBox cmbMoneda;
         private System.Windows.Forms.Label lblSaldoActual;
         private System.Windows.Forms.TextBox txtSaldoActual;
+        private System.Windows.Forms.ToolTip tltAyuda;
     }
 }

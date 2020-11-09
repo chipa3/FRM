@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lblConcepto = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
@@ -44,9 +45,10 @@
             this.txtMonto = new System.Windows.Forms.TextBox();
             this.txtPeticionEncabezado = new System.Windows.Forms.TextBox();
             this.txtEstado = new System.Windows.Forms.TextBox();
-            this.rdbActivo = new System.Windows.Forms.RadioButton();
-            this.rdbInactivo = new System.Windows.Forms.RadioButton();
+            this.rbtnActivo = new System.Windows.Forms.RadioButton();
+            this.rbtnInactivo = new System.Windows.Forms.RadioButton();
             this.txtPolizaSeguridad = new System.Windows.Forms.TextBox();
+            this.tltAyuda = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -171,6 +173,7 @@
             this.dtpFecha.Size = new System.Drawing.Size(422, 27);
             this.dtpFecha.TabIndex = 20;
             this.dtpFecha.Tag = "fecha_peticion_poliza";
+            this.dtpFecha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dtpFecha_KeyPress);
             // 
             // txtDescripcion
             // 
@@ -197,9 +200,9 @@
             // txtPeticionEncabezado
             // 
             this.txtPeticionEncabezado.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPeticionEncabezado.Location = new System.Drawing.Point(1179, 377);
+            this.txtPeticionEncabezado.Location = new System.Drawing.Point(1107, 325);
             this.txtPeticionEncabezado.Name = "txtPeticionEncabezado";
-            this.txtPeticionEncabezado.Size = new System.Drawing.Size(83, 27);
+            this.txtPeticionEncabezado.Size = new System.Drawing.Size(49, 27);
             this.txtPeticionEncabezado.TabIndex = 23;
             this.txtPeticionEncabezado.Tag = "fk_pk_poliza_encabezado";
             this.txtPeticionEncabezado.Visible = false;
@@ -216,38 +219,38 @@
             this.txtEstado.Visible = false;
             this.txtEstado.TextChanged += new System.EventHandler(this.txtEstado_TextChanged);
             // 
-            // rdbActivo
+            // rbtnActivo
             // 
-            this.rdbActivo.AutoSize = true;
-            this.rdbActivo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbActivo.Location = new System.Drawing.Point(808, 286);
-            this.rdbActivo.Name = "rdbActivo";
-            this.rdbActivo.Size = new System.Drawing.Size(80, 24);
-            this.rdbActivo.TabIndex = 25;
-            this.rdbActivo.TabStop = true;
-            this.rdbActivo.Text = "Activo";
-            this.rdbActivo.UseVisualStyleBackColor = true;
-            this.rdbActivo.CheckedChanged += new System.EventHandler(this.rdbActivo_CheckedChanged);
+            this.rbtnActivo.AutoSize = true;
+            this.rbtnActivo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnActivo.Location = new System.Drawing.Point(808, 286);
+            this.rbtnActivo.Name = "rbtnActivo";
+            this.rbtnActivo.Size = new System.Drawing.Size(80, 24);
+            this.rbtnActivo.TabIndex = 25;
+            this.rbtnActivo.TabStop = true;
+            this.rbtnActivo.Text = "Activo";
+            this.rbtnActivo.UseVisualStyleBackColor = true;
+            this.rbtnActivo.CheckedChanged += new System.EventHandler(this.rdbActivo_CheckedChanged);
             // 
-            // rdbInactivo
+            // rbtnInactivo
             // 
-            this.rdbInactivo.AutoSize = true;
-            this.rdbInactivo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbInactivo.Location = new System.Drawing.Point(933, 286);
-            this.rdbInactivo.Name = "rdbInactivo";
-            this.rdbInactivo.Size = new System.Drawing.Size(92, 24);
-            this.rdbInactivo.TabIndex = 26;
-            this.rdbInactivo.TabStop = true;
-            this.rdbInactivo.Text = "Inactivo";
-            this.rdbInactivo.UseVisualStyleBackColor = true;
-            this.rdbInactivo.CheckedChanged += new System.EventHandler(this.rdbInactivo_CheckedChanged);
+            this.rbtnInactivo.AutoSize = true;
+            this.rbtnInactivo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnInactivo.Location = new System.Drawing.Point(933, 286);
+            this.rbtnInactivo.Name = "rbtnInactivo";
+            this.rbtnInactivo.Size = new System.Drawing.Size(92, 24);
+            this.rbtnInactivo.TabIndex = 26;
+            this.rbtnInactivo.TabStop = true;
+            this.rbtnInactivo.Text = "Inactivo";
+            this.rbtnInactivo.UseVisualStyleBackColor = true;
+            this.rbtnInactivo.CheckedChanged += new System.EventHandler(this.rdbInactivo_CheckedChanged);
             // 
             // txtPolizaSeguridad
             // 
             this.txtPolizaSeguridad.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPolizaSeguridad.Location = new System.Drawing.Point(1073, 377);
+            this.txtPolizaSeguridad.Location = new System.Drawing.Point(1042, 325);
             this.txtPolizaSeguridad.Name = "txtPolizaSeguridad";
-            this.txtPolizaSeguridad.Size = new System.Drawing.Size(100, 27);
+            this.txtPolizaSeguridad.Size = new System.Drawing.Size(59, 27);
             this.txtPolizaSeguridad.TabIndex = 27;
             this.txtPolizaSeguridad.Text = "1";
             this.txtPolizaSeguridad.Visible = false;
@@ -259,8 +262,8 @@
             this.BackColor = System.Drawing.Color.Gold;
             this.ClientSize = new System.Drawing.Size(1463, 655);
             this.Controls.Add(this.txtPolizaSeguridad);
-            this.Controls.Add(this.rdbInactivo);
-            this.Controls.Add(this.rdbActivo);
+            this.Controls.Add(this.rbtnInactivo);
+            this.Controls.Add(this.rbtnActivo);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtPeticionEncabezado);
             this.Controls.Add(this.txtMonto);
@@ -305,8 +308,9 @@
         private System.Windows.Forms.TextBox txtMonto;
         private System.Windows.Forms.TextBox txtPeticionEncabezado;
         private System.Windows.Forms.TextBox txtEstado;
-        private System.Windows.Forms.RadioButton rdbActivo;
-        private System.Windows.Forms.RadioButton rdbInactivo;
+        private System.Windows.Forms.RadioButton rbtnActivo;
+        private System.Windows.Forms.RadioButton rbtnInactivo;
         private System.Windows.Forms.TextBox txtPolizaSeguridad;
+        private System.Windows.Forms.ToolTip tltAyuda;
     }
 }

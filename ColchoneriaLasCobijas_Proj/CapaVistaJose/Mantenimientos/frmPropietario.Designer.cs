@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
             this.lblEstado = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
@@ -37,9 +38,10 @@
             this.txtPropietario = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.navegador1 = new CapaVistaNavegador.Navegador();
-            this.rbEstadoActivo = new System.Windows.Forms.RadioButton();
-            this.rbEstadoInactivo = new System.Windows.Forms.RadioButton();
+            this.rbtnActivo = new System.Windows.Forms.RadioButton();
+            this.rbtnInactivo = new System.Windows.Forms.RadioButton();
             this.txtEstado = new System.Windows.Forms.TextBox();
+            this.tltAyuda = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,14 +54,14 @@
             this.dgvDatos.RowHeadersWidth = 51;
             this.dgvDatos.RowTemplate.Height = 24;
             this.dgvDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDatos.Size = new System.Drawing.Size(847, 246);
+            this.dgvDatos.Size = new System.Drawing.Size(847, 270);
             this.dgvDatos.TabIndex = 37;
             // 
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(18, 366);
+            this.lblEstado.Location = new System.Drawing.Point(15, 409);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(77, 20);
             this.lblEstado.TabIndex = 36;
@@ -69,7 +71,7 @@
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.Location = new System.Drawing.Point(14, 247);
+            this.lblDescripcion.Location = new System.Drawing.Point(11, 290);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(123, 20);
             this.lblDescripcion.TabIndex = 35;
@@ -98,9 +100,10 @@
             // txtDescripcion
             // 
             this.txtDescripcion.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(188, 242);
+            this.txtDescripcion.Location = new System.Drawing.Point(185, 285);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtDescripcion.Size = new System.Drawing.Size(325, 102);
             this.txtDescripcion.TabIndex = 31;
             this.txtDescripcion.Tag = "descripcion_propietario";
@@ -109,9 +112,11 @@
             // txtPropietario
             // 
             this.txtPropietario.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPropietario.Location = new System.Drawing.Point(188, 200);
+            this.txtPropietario.Location = new System.Drawing.Point(185, 200);
+            this.txtPropietario.Multiline = true;
             this.txtPropietario.Name = "txtPropietario";
-            this.txtPropietario.Size = new System.Drawing.Size(325, 27);
+            this.txtPropietario.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtPropietario.Size = new System.Drawing.Size(325, 79);
             this.txtPropietario.TabIndex = 30;
             this.txtPropietario.Tag = "nombre_propietario";
             this.txtPropietario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPropietario_KeyPress);
@@ -135,36 +140,36 @@
             this.navegador1.TabIndex = 28;
             this.navegador1.Load += new System.EventHandler(this.navegador1_Load);
             // 
-            // rbEstadoActivo
+            // rbtnActivo
             // 
-            this.rbEstadoActivo.AutoSize = true;
-            this.rbEstadoActivo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbEstadoActivo.Location = new System.Drawing.Point(188, 366);
-            this.rbEstadoActivo.Name = "rbEstadoActivo";
-            this.rbEstadoActivo.Size = new System.Drawing.Size(80, 24);
-            this.rbEstadoActivo.TabIndex = 38;
-            this.rbEstadoActivo.TabStop = true;
-            this.rbEstadoActivo.Text = "Activo";
-            this.rbEstadoActivo.UseVisualStyleBackColor = true;
-            this.rbEstadoActivo.CheckedChanged += new System.EventHandler(this.rbEstadoActivo_CheckedChanged);
+            this.rbtnActivo.AutoSize = true;
+            this.rbtnActivo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnActivo.Location = new System.Drawing.Point(185, 409);
+            this.rbtnActivo.Name = "rbtnActivo";
+            this.rbtnActivo.Size = new System.Drawing.Size(80, 24);
+            this.rbtnActivo.TabIndex = 38;
+            this.rbtnActivo.TabStop = true;
+            this.rbtnActivo.Text = "Activo";
+            this.rbtnActivo.UseVisualStyleBackColor = true;
+            this.rbtnActivo.CheckedChanged += new System.EventHandler(this.rbEstadoActivo_CheckedChanged);
             // 
-            // rbEstadoInactivo
+            // rbtnInactivo
             // 
-            this.rbEstadoInactivo.AutoSize = true;
-            this.rbEstadoInactivo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbEstadoInactivo.Location = new System.Drawing.Point(306, 366);
-            this.rbEstadoInactivo.Name = "rbEstadoInactivo";
-            this.rbEstadoInactivo.Size = new System.Drawing.Size(92, 24);
-            this.rbEstadoInactivo.TabIndex = 39;
-            this.rbEstadoInactivo.TabStop = true;
-            this.rbEstadoInactivo.Text = "Inactivo";
-            this.rbEstadoInactivo.UseVisualStyleBackColor = true;
-            this.rbEstadoInactivo.CheckedChanged += new System.EventHandler(this.rbEstadoInactivo_CheckedChanged);
+            this.rbtnInactivo.AutoSize = true;
+            this.rbtnInactivo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnInactivo.Location = new System.Drawing.Point(303, 409);
+            this.rbtnInactivo.Name = "rbtnInactivo";
+            this.rbtnInactivo.Size = new System.Drawing.Size(92, 24);
+            this.rbtnInactivo.TabIndex = 39;
+            this.rbtnInactivo.TabStop = true;
+            this.rbtnInactivo.Text = "Inactivo";
+            this.rbtnInactivo.UseVisualStyleBackColor = true;
+            this.rbtnInactivo.CheckedChanged += new System.EventHandler(this.rbEstadoInactivo_CheckedChanged);
             // 
             // txtEstado
             // 
             this.txtEstado.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEstado.Location = new System.Drawing.Point(443, 365);
+            this.txtEstado.Location = new System.Drawing.Point(440, 409);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(70, 27);
             this.txtEstado.TabIndex = 40;
@@ -179,8 +184,8 @@
             this.BackColor = System.Drawing.Color.Gold;
             this.ClientSize = new System.Drawing.Size(1437, 450);
             this.Controls.Add(this.txtEstado);
-            this.Controls.Add(this.rbEstadoInactivo);
-            this.Controls.Add(this.rbEstadoActivo);
+            this.Controls.Add(this.rbtnInactivo);
+            this.Controls.Add(this.rbtnActivo);
             this.Controls.Add(this.dgvDatos);
             this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.lblDescripcion);
@@ -211,8 +216,9 @@
         private System.Windows.Forms.TextBox txtPropietario;
         private System.Windows.Forms.TextBox txtCodigo;
         private CapaVistaNavegador.Navegador navegador1;
-        private System.Windows.Forms.RadioButton rbEstadoActivo;
-        private System.Windows.Forms.RadioButton rbEstadoInactivo;
+        private System.Windows.Forms.RadioButton rbtnActivo;
+        private System.Windows.Forms.RadioButton rbtnInactivo;
         private System.Windows.Forms.TextBox txtEstado;
+        private System.Windows.Forms.ToolTip tltAyuda;
     }
 }
