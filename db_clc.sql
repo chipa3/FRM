@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-11-2020 a las 21:42:10
+-- Tiempo de generación: 10-11-2020 a las 00:31:16
 -- Versión del servidor: 10.1.37-MariaDB
 -- Versión de PHP: 7.3.1
 
@@ -58,8 +58,8 @@ INSERT INTO `aplicacion` (`pk_id_aplicacion`, `fk_id_modulo`, `nombre_aplicacion
 (1305, 5, 'CUENTA BANCARIA', 'CUENTA BANCARIA', 1),
 (1306, 5, 'PROPIETARIO', 'PROPIETARIO', 1),
 (1307, 5, 'TRANSACCIONES', 'TRANSACCIONES', 1),
-(1308, 5, 'DISPONIBILIDAD DIARIA', 'REPORTE DE DISPONIBILIDAD DIAROA', 1),
-(1309, 5, 'Peticion Poliza', 'Peticion sobre las polizas', 1);
+(1308, 5, 'DISPONIBILIDAD DIARIA', 'REPORTE DE DISPONIBILIDAD DIARIA', 1),
+(1309, 5, 'PETICION POLIZA', 'PETICION POLIZA', 1);
 
 -- --------------------------------------------------------
 
@@ -118,14 +118,14 @@ INSERT INTO `aplicacion_usuario` (`pk_id_aplicacion_usuario`, `fk_idlogin_aplica
 (5, 4, 6, 14),
 (6, 5, 5, 16),
 (7, 5, 2, 17),
-(8, 7, 1302, 1),
-(9, 7, 1304, 1),
-(10, 7, 1305, 1),
-(11, 7, 1306, 1),
-(12, 7, 1303, 1),
-(13, 7, 1307, 1),
-(14, 7, 1308, 1),
-(15, 7, 1309, 1);
+(8, 6, 1302, 1),
+(9, 6, 1303, 1),
+(10, 6, 1304, 1),
+(11, 6, 1305, 1),
+(12, 6, 1306, 1),
+(13, 6, 1307, 1),
+(14, 6, 1308, 1),
+(15, 6, 1309, 1);
 
 -- --------------------------------------------------------
 
@@ -156,7 +156,7 @@ CREATE TABLE `baja` (
   `fk_id_empleado_baja` int(11) DEFAULT NULL,
   `fk_id_tipo_baja` int(11) DEFAULT NULL,
   `prestaciones_baja` double DEFAULT NULL,
-  `tiempo_laborado_baja` int(11) DEFAULT NULL,
+  `tiempo_laborado_baja` varchar(200) DEFAULT NULL,
   `fecha_despido_baja` varchar(10) DEFAULT NULL,
   `causa_bajas` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -207,11 +207,7 @@ CREATE TABLE `banco` (
 --
 
 INSERT INTO `banco` (`pk_id_banco`, `nombre_banco`, `estado_banco`) VALUES
-(1, 'INDUSTRIAL', 1),
-(2, 'GYT CONTINENTAL', 1),
-(3, 'AGROMERCANTIL', 1),
-(4, 'BANCO MUNDIAL', 1),
-(5, 'BANRURAL', 1);
+(1, 'GYT', 1);
 
 -- --------------------------------------------------------
 
@@ -234,21 +230,101 @@ CREATE TABLE `bitacora` (
 --
 
 INSERT INTO `bitacora` (`pk_id_bitacora`, `fk_idusuario_bitacora`, `fk_idaplicacion_bitacora`, `fechahora_bitacora`, `direccionhost_bitacora`, `nombrehost_bitacora`, `accion_bitacora`) VALUES
-(72, 7, 1, '08/11/2020 14:34:45', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo Exitoso'),
-(73, 7, 1305, '08/11/2020 14:34:45', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion Cuenta Bancaria'),
-(74, 7, 1309, '08/11/2020 14:34:45', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion de peticion poliza'),
-(75, 7, 1309, '08/11/2020 14:34:45', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion de peticion poliza'),
-(76, 7, 1305, '08/11/2020 14:34:45', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion Cuenta Bancaria'),
-(77, 7, 1, '08/11/2020 14:40:22', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo Exitoso'),
-(78, 7, 1305, '08/11/2020 14:40:22', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion Cuenta Bancaria'),
-(79, 7, 1306, '08/11/2020 14:40:22', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion Propietario de cuenta bancaria'),
-(80, 7, 1302, '08/11/2020 14:40:22', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion Bancos'),
-(81, 7, 1303, '08/11/2020 14:40:22', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion de tipo moneda'),
-(82, 7, 1304, '08/11/2020 14:40:22', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion de movimiento bancario'),
-(83, 7, 1309, '08/11/2020 14:40:22', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion de peticion poliza'),
-(84, 7, 1307, '08/11/2020 14:40:22', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso al proceso de Transacciones'),
-(85, 7, 4, '08/11/2020 14:40:22', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Trato de ingresar a la aplicacion de mantenimiento de perfil'),
-(86, 7, 1308, '08/11/2020 14:40:22', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso al reporte de Disponibilidad Diaria');
+(1, 1, 1, '09/11/2020 15:16:27', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo erroneo'),
+(2, 1, 1, '09/11/2020 15:16:27', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo Exitoso'),
+(3, 1, 1305, '09/11/2020 15:16:27', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Trato de ingresar a la aplicacion Cuenta Bancaria'),
+(4, 1, 2, '09/11/2020 15:16:27', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso al mantenimiento de usuarios'),
+(5, 1, 2, '09/11/2020 15:16:27', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', ' INSERT INTO login VALUES ( 6,  JLOPEZ,  LwUsihMe9Bl//D/5WaIzLA==,  JOSE LOPEZ,  1) '),
+(6, 1, 3, '09/11/2020 15:16:27', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso al mantenimiento de aplicaciones'),
+(7, 1, 2, '09/11/2020 15:16:27', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso al mantenimiento de usuarios'),
+(8, 1, 6, '09/11/2020 15:16:27', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la asignacion de aplicaciones'),
+(9, 1, 6, '09/11/2020 15:16:27', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la asignacion de aplicaciones'),
+(10, 6, 1, '09/11/2020 15:19:05', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo Exitoso'),
+(11, 6, 1305, '09/11/2020 15:19:05', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion Cuenta Bancaria'),
+(12, 6, 1, '09/11/2020 15:21:44', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo Exitoso'),
+(13, 6, 2, '09/11/2020 15:21:44', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Trato de ingresar al mantenimiento de usuarios'),
+(14, 6, 1306, '09/11/2020 15:21:44', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion Propietario de cuenta bancaria'),
+(15, 6, 1306, '09/11/2020 15:21:44', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Refrescar Datos'),
+(16, 6, 1306, '09/11/2020 15:21:44', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion Propietario de cuenta bancaria'),
+(17, 6, 1306, '09/11/2020 15:21:44', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Refrescar Datos'),
+(18, 6, 1306, '09/11/2020 15:21:44', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Refrescar Datos'),
+(19, 6, 1306, '09/11/2020 15:21:44', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Formulario de ayuda'),
+(20, 6, 1306, '09/11/2020 15:21:44', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Refrescar Datos'),
+(21, 6, 1306, '09/11/2020 15:21:44', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Refrescar Datos'),
+(22, 6, 1306, '09/11/2020 15:21:44', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Salir de la aplicacion'),
+(23, 1, 1, '09/11/2020 15:22:40', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo Exitoso'),
+(24, 1, 4, '09/11/2020 15:22:40', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la apliacion de mantenimiento de perfil'),
+(25, 1, 5, '09/11/2020 15:22:40', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la apliacion de mantenimiento de perfil apliaciones a perfil'),
+(26, 1, 4, '09/11/2020 15:22:40', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la apliacion de mantenimiento de perfil'),
+(27, 1, 6, '09/11/2020 15:22:40', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la asignacion de aplicaciones'),
+(28, 1, 3, '09/11/2020 15:22:40', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso al mantenimiento de aplicaciones'),
+(29, 1, 8, '09/11/2020 15:22:40', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la apliacion de Modulo'),
+(30, 1, 8, '09/11/2020 15:22:40', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', ' INSERT INTO modulo VALUES ( 9,  PRUEBA,  PRUEBA,  1) '),
+(31, 1, 1303, '09/11/2020 15:22:40', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Trato de ingresar a la aplicacion de tipo moneda'),
+(32, 6, 1, '09/11/2020 15:22:40', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo Exitoso'),
+(33, 6, 1304, '09/11/2020 15:22:40', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion de movimiento bancario'),
+(34, 6, 1303, '09/11/2020 15:22:40', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion de tipo moneda'),
+(35, 6, 1307, '09/11/2020 15:22:40', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso al proceso de Transacciones'),
+(36, 6, 1, '09/11/2020 15:36:26', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo Exitoso'),
+(37, 6, 1304, '09/11/2020 15:36:26', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion de movimiento bancario'),
+(38, 6, 1307, '09/11/2020 15:36:26', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso al proceso de Transacciones'),
+(39, 6, 1308, '09/11/2020 15:36:26', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso al reporte de Disponibilidad Diaria'),
+(40, 6, 1309, '09/11/2020 15:36:26', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion de peticion poliza'),
+(41, 6, 1, '09/11/2020 15:38:14', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo erroneo'),
+(42, 6, 1, '09/11/2020 15:38:14', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo Exitoso'),
+(43, 6, 1309, '09/11/2020 15:38:14', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion de peticion poliza'),
+(44, 6, 1, '09/11/2020 15:40:01', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo Exitoso'),
+(45, 6, 1309, '09/11/2020 15:40:01', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion de peticion poliza'),
+(46, 6, 1, '09/11/2020 15:43:55', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo Exitoso'),
+(47, 6, 1302, '09/11/2020 15:43:55', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion Bancos'),
+(48, 6, 1302, '09/11/2020 15:43:55', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', ' INSERT INTO banco VALUES ( 1,  GYT,  1) '),
+(49, 6, 1303, '09/11/2020 15:43:55', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion de tipo moneda'),
+(50, 6, 1303, '09/11/2020 15:43:55', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', ' INSERT INTO tipo_moneda VALUES ( 1,  QUETZAL,  Q,  MONEDA GUATEMALTECA,  1) '),
+(51, 6, 1304, '09/11/2020 15:43:55', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion de movimiento bancario'),
+(52, 6, 1304, '09/11/2020 15:43:55', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', ' INSERT INTO tipo_transaccion VALUES ( 1,  DEPOSITO,  DEPOSITO DE DINERO EN LA CUENTA BANCARIA,  1) '),
+(53, 6, 1304, '09/11/2020 15:43:55', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', ' INSERT INTO tipo_transaccion VALUES ( 2,  RETIRO,  RETIRO DE DINERO EN LA CUENTA BANCARIA,  1) '),
+(54, 6, 1304, '09/11/2020 15:43:55', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion de movimiento bancario'),
+(55, 6, 1306, '09/11/2020 15:43:55', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion Propietario de cuenta bancaria'),
+(56, 6, 1306, '09/11/2020 15:43:55', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', ' INSERT INTO propietario VALUES ( 1,  JOSE ESTANISLAO LOPEZ TUBAC,  ENCARGADO DEL AREA DE BANCOS DEL MODULO FRM,  1) '),
+(57, 6, 1307, '09/11/2020 15:43:55', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso al proceso de Transacciones'),
+(58, 6, 1, '09/11/2020 15:51:47', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo Exitoso'),
+(59, 6, 1307, '09/11/2020 15:51:47', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso al proceso de Transacciones'),
+(60, 6, 1, '09/11/2020 15:54:37', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo Exitoso'),
+(61, 6, 1305, '09/11/2020 15:54:37', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion Cuenta Bancaria'),
+(62, 6, 1305, '09/11/2020 15:54:37', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Cancelar'),
+(63, 6, 1305, '09/11/2020 15:54:37', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Cancelar'),
+(64, 6, 1305, '09/11/2020 15:54:37', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Formulario de ayuda'),
+(65, 6, 1305, '09/11/2020 15:54:37', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Cancelar'),
+(66, 6, 1309, '09/11/2020 15:54:37', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion de peticion poliza'),
+(67, 6, 1309, '09/11/2020 15:54:37', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Formulario de ayuda'),
+(68, 6, 1309, '09/11/2020 15:54:37', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion de peticion poliza'),
+(69, 6, 1307, '09/11/2020 15:54:37', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso al proceso de Transacciones'),
+(70, 6, 1308, '09/11/2020 15:54:37', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso al reporte de Disponibilidad Diaria'),
+(71, 6, 1308, '09/11/2020 15:54:37', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso al reporte de Disponibilidad Diaria'),
+(72, 6, 1307, '09/11/2020 15:54:37', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso al proceso de Transacciones'),
+(73, 6, 1309, '09/11/2020 15:54:37', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion de peticion poliza'),
+(74, 6, 1305, '09/11/2020 15:54:37', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion Cuenta Bancaria'),
+(75, 6, 1, '09/11/2020 16:02:01', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo Exitoso'),
+(76, 6, 1307, '09/11/2020 16:02:01', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso al proceso de Transacciones'),
+(77, 6, 1309, '09/11/2020 16:02:01', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion de peticion poliza'),
+(78, 6, 1308, '09/11/2020 16:02:01', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso al reporte de Disponibilidad Diaria'),
+(79, 6, 1, '09/11/2020 16:08:43', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo Exitoso'),
+(80, 6, 1308, '09/11/2020 16:08:43', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso al reporte de Disponibilidad Diaria'),
+(81, 6, 1, '09/11/2020 16:21:50', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo Exitoso'),
+(82, 6, 1, '09/11/2020 16:47:28', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo erroneo'),
+(83, 6, 1, '09/11/2020 16:47:28', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo Exitoso'),
+(84, 6, 1309, '09/11/2020 16:47:28', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion de peticion poliza'),
+(85, 6, 1, '09/11/2020 17:26:59', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Logeo Exitoso'),
+(86, 6, 1305, '09/11/2020 17:26:59', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion Cuenta Bancaria'),
+(87, 6, 1305, '09/11/2020 17:26:59', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Formulario de ayuda'),
+(88, 6, 1306, '09/11/2020 17:26:59', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion Propietario de cuenta bancaria'),
+(89, 6, 1306, '09/11/2020 17:26:59', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Formulario de ayuda'),
+(90, 6, 1302, '09/11/2020 17:26:59', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion Bancos'),
+(91, 6, 1302, '09/11/2020 17:26:59', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Formulario de ayuda'),
+(92, 6, 1309, '09/11/2020 17:26:59', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso a la aplicacion de peticion poliza'),
+(93, 6, 1309, '09/11/2020 17:26:59', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Formulario de ayuda'),
+(94, 6, 1307, '09/11/2020 17:26:59', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso al proceso de Transacciones'),
+(95, 6, 1308, '09/11/2020 17:26:59', 'fdb4:f58e:1300:1d00:', 'LAPTOP-I01T9HGS', 'Ingreso al reporte de Disponibilidad Diaria');
 
 -- --------------------------------------------------------
 
@@ -485,9 +561,7 @@ CREATE TABLE `cuenta_bancaria` (
 --
 
 INSERT INTO `cuenta_bancaria` (`pk_id_numero_cuenta_bancaria`, `fk_id_banco`, `fk_id_propietario`, `fk_id_tipo_moneda`, `saldo_cuenta_bancaria`, `fecha_apertura_cuenta_bancaria`, `estado_apertura_cuenta_bancaria`) VALUES
-(1, 1, 1, 1, 250000, '2020-10-02 00:00:00', 1),
-(2, 2, 2, 1, 50000, '2020-11-05 06:15:23', 1),
-(3, 1, 3, 1, 10000, '2020-11-04 06:23:48', 1);
+(1, 1, 1, 1, 80000, '2020-10-01 00:00:00', 1);
 
 -- --------------------------------------------------------
 
@@ -690,7 +764,7 @@ CREATE TABLE `empleado` (
   `apellido1_empleado` varchar(45) DEFAULT NULL,
   `apellido2_empleado` varchar(45) DEFAULT NULL,
   `fecha_nacimiento_empleado` varchar(10) DEFAULT NULL,
-  `dpi_empleado` int(11) DEFAULT NULL,
+  `dpi_empleado` int(15) DEFAULT NULL,
   `fk_id_genero_empleado` int(11) DEFAULT NULL,
   `fk_id_estado_civil_empleado` int(11) DEFAULT NULL,
   `email_empleado` varchar(125) DEFAULT NULL,
@@ -698,9 +772,10 @@ CREATE TABLE `empleado` (
   `numero_iggs_empleado` int(11) DEFAULT NULL,
   `fk_id_licencia_conducir_empleado` int(11) DEFAULT NULL,
   `fk_id_puesto_empleado` int(11) DEFAULT NULL,
+  `fk_id_horario_empleado` int(11) DEFAULT NULL,
   `cuenta_bancaria_empleado` int(11) DEFAULT NULL,
   `fk_id_departamento_empresarial_empleado` int(11) DEFAULT NULL,
-  `estado_empleado` int(11) DEFAULT NULL
+  `estado_empleado` varchar(25) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -767,7 +842,7 @@ CREATE TABLE `entrevista` (
   `fk_id_empleado_entrevista` int(11) DEFAULT NULL,
   `fk_id_reclutamiento_entrevista` int(11) DEFAULT NULL,
   `fk_id_tipo_entrevista` int(11) DEFAULT NULL,
-  `resultado_entrevista` int(11) DEFAULT NULL,
+  `resultado_entrevista` varchar(55) DEFAULT NULL,
   `comentarios_entrevistador_entrevista` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -974,7 +1049,7 @@ INSERT INTO `login` (`pk_id_login`, `usuario_login`, `contraseña_login`, `nombr
 (3, 'bmaza', 'xTfsC3/XR/CVyDvNr1Fs+g==', 'Bryan Mazariegos', 1),
 (4, 'jsican', 'jsican', 'Jeshua Sican', 0),
 (5, 'jmorataya', '123', 'Julio Morataya', 0),
-(7, 'JLOPEZ', 'LwUsihMe9Bl//D/5WaIzLA==', 'JOSE LOPEZ', 1);
+(6, 'JLOPEZ', 'LwUsihMe9Bl//D/5WaIzLA==', 'JOSE LOPEZ', 1);
 
 -- --------------------------------------------------------
 
@@ -1026,7 +1101,8 @@ INSERT INTO `modulo` (`pk_id_modulo`, `nombre_modulo`, `descripcion_modulo`, `es
 (5, 'FRM', 'Aplicaciones de Finanzas', 1),
 (6, 'SCM', 'Aplicaciones Control de Inventario', 1),
 (7, 'MRP', 'Aplicaciones de Produccion', 1),
-(8, 'CRM', 'Aplicaciones de Ventas', 1);
+(8, 'CRM', 'Aplicaciones de Ventas', 1),
+(9, 'PRUEBA', 'PRUEBA', 1);
 
 -- --------------------------------------------------------
 
@@ -1053,9 +1129,9 @@ CREATE TABLE `movimiento_inventario` (
   `pk_id_movimiento_inventario` int(10) NOT NULL,
   `fecha_movimiento_inventario` datetime NOT NULL,
   `fk_id_tipo_movimiento` int(10) NOT NULL,
-  `fk_id_ruta` int(10) NOT NULL,
-  `fk_id_vehiculo` int(10) NOT NULL,
-  `documento_asociado_movimiento_inventario` int(10) NOT NULL,
+  `fk_id_ruta` int(10) DEFAULT NULL,
+  `fk_id_vehiculo` int(10) DEFAULT NULL,
+  `documento_asociado_movimiento_inventario` int(10) DEFAULT NULL,
   `descripcion_movimiento_inventario` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -1240,7 +1316,15 @@ INSERT INTO `permiso` (`pk_id_permiso`, `insertar_permiso`, `modificar_permiso`,
 (14, 0, 0, 0, 0, 0),
 (15, 1, 0, 0, 1, 0),
 (16, 0, 0, 0, 0, 0),
-(17, 1, 1, 0, 0, 0);
+(17, 1, 1, 0, 0, 0),
+(18, 0, 0, 0, 0, 0),
+(19, 0, 0, 0, 0, 0),
+(20, 0, 0, 0, 0, 0),
+(21, 0, 0, 0, 0, 0),
+(22, 0, 0, 0, 0, 0),
+(23, 0, 0, 0, 0, 0),
+(24, 0, 0, 0, 0, 0),
+(25, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1263,10 +1347,7 @@ CREATE TABLE `peticion_poliza` (
 --
 
 INSERT INTO `peticion_poliza` (`pk_id_peticion_poliza`, `concepto_peticion_poliza`, `fecha_peticion_poliza`, `descripcion_peticion_poliza`, `monto_peticion_poliza`, `fk_pk_poliza_encabezado`, `estado_peticion_poliza`) VALUES
-(1, 'DATO NULO', '2020-11-08 00:00:00', 'DATO NULO', 10, 1, 1),
-(2, 'DATO NULO', '2020-11-08 11:54:39', 'DATO NULO', 500, 2, 1),
-(3, 'A', '2020-11-08 12:03:38', 'A', 2, 1, 1),
-(4, 'PRUEBA', '2020-11-10 12:08:33', 'PRUEBA', 2600.6, 1, 1);
+(1, 'DATO NULO', '2020-11-08 00:00:00', 'DATO NULO', 0, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -1343,9 +1424,7 @@ CREATE TABLE `propietario` (
 --
 
 INSERT INTO `propietario` (`pk_id_propietario`, `nombre_propietario`, `descripcion_propietario`, `estado_propietario`) VALUES
-(1, 'prueba', 'prueba', 1),
-(2, 'José Estanislao López Tubac', 'Modulo FRM', 1),
-(3, 'CARLOS LAIB', 'MODULO FRM', 1);
+(1, 'JOSE ESTANISLAO LOPEZ TUBAC', 'ENCARGADO DEL AREA DE BANCOS DEL MODULO FRM', 1);
 
 -- --------------------------------------------------------
 
@@ -1402,7 +1481,7 @@ CREATE TABLE `reclutamiento` (
   `apellido1_reclutamiento` varchar(45) DEFAULT NULL,
   `apellido2_reclutamiento` varchar(45) DEFAULT NULL,
   `fecha_nacimiento_reclutamiento` varchar(10) DEFAULT NULL,
-  `dpi_reclutamiento` int(11) DEFAULT NULL,
+  `dpi_reclutamiento` int(15) DEFAULT NULL,
   `fk_id_genero_reclutamiento` int(11) DEFAULT NULL,
   `fk_id_estado_civil_reclutamiento` int(11) DEFAULT NULL,
   `email_reclutamiento` varchar(125) DEFAULT NULL,
@@ -1410,7 +1489,8 @@ CREATE TABLE `reclutamiento` (
   `numero_igss_reclutamiento` int(11) DEFAULT NULL,
   `fk_id_licencia_conducir_reclutamiento` int(11) DEFAULT NULL,
   `fk_id_puesto_reclutamiento` int(11) DEFAULT NULL,
-  `estado_reclutado_entrevista` int(11) DEFAULT NULL,
+  `fk_id_horario_reclutamiento` int(11) DEFAULT NULL,
+  `estado_reclutado_entrevista` varchar(25) DEFAULT NULL,
   `nombre_profesion` varchar(125) DEFAULT NULL,
   `fk_id_departamento_empresarial_reclutamiento` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -1568,9 +1648,7 @@ CREATE TABLE `tipo_moneda` (
 --
 
 INSERT INTO `tipo_moneda` (`pk_id_tipo_moneda`, `moneda_tipo_moneda`, `simbolo_tipo_moneda`, `descripcion_tipo_moneda`, `estado_tipo_moneda`) VALUES
-(1, 'QUETZAL', 'Q', 'MONEDA GUATEMALTECA', 1),
-(2, 'DOLAR', 'S', 'USA', 1),
-(3, 'PESO', 'S', 'MONEDA MEXICANA', 0);
+(1, 'QUETZAL', 'Q', 'MONEDA GUATEMALTECA', 1);
 
 -- --------------------------------------------------------
 
@@ -1603,8 +1681,8 @@ CREATE TABLE `tipo_transaccion` (
 --
 
 INSERT INTO `tipo_transaccion` (`pk_id_tipo_transaccion`, `nombre_tipo_transaccion`, `descripcion_tipo_transaccion`, `estado_tipo_transaccion`) VALUES
-(1, 'DEPOSITO', 'CARGAR DINERO A LA CUENTA', 1),
-(2, 'RETIRO', 'SACAR DINERO DE LA CUENTA', 1);
+(1, 'DEPOSITO', 'DEPOSITO DE DINERO EN LA CUENTA BANCARIA', 1),
+(2, 'RETIRO', 'RETIRO DE DINERO EN LA CUENTA BANCARIA', 1);
 
 -- --------------------------------------------------------
 
@@ -1638,9 +1716,8 @@ CREATE TABLE `transaccion` (
 --
 
 INSERT INTO `transaccion` (`pk_id_transaccion`, `fk_id_numero_cuenta_bancaria`, `fecha_transaccion`, `fk_id_tipo_transaccion`, `fk_id_tipo_moneda`, `monto_transaccion`, `descripcion_transaccion`) VALUES
-(1, 1, '2020-11-05 17:11:00', 1, 1, 600, 'DEPOSITO POR PARTE DE UNA COMPRA'),
-(2, 2, '2020-11-05 18:11:00', 1, 1, 100, 'RETIRO PARA EL ALMUEZO'),
-(3, 2, '2020-11-06 11:11:00', 1, 1, 500, 'NO SE');
+(1, 1, '2020-11-09 15:11:00', 1, 1, 60000, 'prueba'),
+(2, 1, '2020-11-09 15:11:00', 2, 1, 5000, 'Dinero para comida');
 
 -- --------------------------------------------------------
 
@@ -1963,7 +2040,8 @@ ALTER TABLE `empleado`
   ADD KEY `fk_estado_civil_empleado` (`fk_id_estado_civil_empleado`),
   ADD KEY `fk_licencia_conducir_empleado` (`fk_id_licencia_conducir_empleado`),
   ADD KEY `fk_puesto_empleado` (`fk_id_puesto_empleado`),
-  ADD KEY `fk_departamento_empresarial_empleado` (`fk_id_departamento_empresarial_empleado`);
+  ADD KEY `fk_departamento_empresarial_empleado` (`fk_id_departamento_empresarial_empleado`),
+  ADD KEY `fk_horario_empleado` (`fk_id_horario_empleado`);
 
 --
 -- Indices de la tabla `encabezado_capacitacion`
@@ -2293,7 +2371,8 @@ ALTER TABLE `reclutamiento`
   ADD KEY `fk_estado_civil_reclutamiento` (`fk_id_estado_civil_reclutamiento`),
   ADD KEY `fk_licencia_conducir_reclutamiento` (`fk_id_licencia_conducir_reclutamiento`),
   ADD KEY `fk_puesto_reclutamiento` (`fk_id_puesto_reclutamiento`),
-  ADD KEY `fk_departamento_empresarial_reclutamiento` (`fk_id_departamento_empresarial_reclutamiento`);
+  ADD KEY `fk_departamento_empresarial_reclutamiento` (`fk_id_departamento_empresarial_reclutamiento`),
+  ADD KEY `fk_horario_reclutamiento` (`fk_id_horario_reclutamiento`);
 
 --
 -- Indices de la tabla `reporte`
@@ -2438,7 +2517,7 @@ ALTER TABLE `aplicacion_usuario`
 -- AUTO_INCREMENT de la tabla `bitacora`
 --
 ALTER TABLE `bitacora`
-  MODIFY `pk_id_bitacora` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
+  MODIFY `pk_id_bitacora` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
 
 --
 -- AUTO_INCREMENT de la tabla `bodega`
@@ -2576,7 +2655,7 @@ ALTER TABLE `linea_producto`
 -- AUTO_INCREMENT de la tabla `login`
 --
 ALTER TABLE `login`
-  MODIFY `pk_id_login` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `pk_id_login` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `marca`
@@ -2594,7 +2673,7 @@ ALTER TABLE `materia_prima`
 -- AUTO_INCREMENT de la tabla `modulo`
 --
 ALTER TABLE `modulo`
-  MODIFY `pk_id_modulo` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `pk_id_modulo` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `movimiento_cuenta_por_cobrar`
@@ -2636,7 +2715,7 @@ ALTER TABLE `perfil_usuario`
 -- AUTO_INCREMENT de la tabla `permiso`
 --
 ALTER TABLE `permiso`
-  MODIFY `pk_id_permiso` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `pk_id_permiso` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT de la tabla `producto`
@@ -2917,6 +2996,7 @@ ALTER TABLE `empleado`
   ADD CONSTRAINT `fk_departamento_empresarial_empleado` FOREIGN KEY (`fk_id_departamento_empresarial_empleado`) REFERENCES `departamento_empresarial` (`pk_id__departamento_empresarial`) ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_estado_civil_empleado` FOREIGN KEY (`fk_id_estado_civil_empleado`) REFERENCES `estado_civil` (`pk_id_estado_civil`) ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_genero_empleado1` FOREIGN KEY (`fk_id_genero_empleado`) REFERENCES `genero` (`pk_id_genero`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_horario_empleado` FOREIGN KEY (`fk_id_horario_empleado`) REFERENCES `horario` (`pk_id_horario`) ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_licencia_conducir_empleado` FOREIGN KEY (`fk_id_licencia_conducir_empleado`) REFERENCES `licencia_conduccion` (`pk_id_licencia_conduccion`) ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_puesto_empleado` FOREIGN KEY (`fk_id_puesto_empleado`) REFERENCES `puesto` (`pk_id_puesto`) ON UPDATE CASCADE;
 
@@ -3094,6 +3174,7 @@ ALTER TABLE `reclutamiento`
   ADD CONSTRAINT `fk_departamento_empresarial_reclutamiento` FOREIGN KEY (`fk_id_departamento_empresarial_reclutamiento`) REFERENCES `departamento_empresarial` (`pk_id__departamento_empresarial`) ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_estado_civil_reclutamiento` FOREIGN KEY (`fk_id_estado_civil_reclutamiento`) REFERENCES `estado_civil` (`pk_id_estado_civil`) ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_genero_reclutamiento` FOREIGN KEY (`fk_id_genero_reclutamiento`) REFERENCES `genero` (`pk_id_genero`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_horario_reclutamiento` FOREIGN KEY (`fk_id_horario_reclutamiento`) REFERENCES `horario` (`pk_id_horario`) ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_licencia_conducir_reclutamiento` FOREIGN KEY (`fk_id_licencia_conducir_reclutamiento`) REFERENCES `licencia_conduccion` (`pk_id_licencia_conduccion`) ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_nivel_estudio_reclutamiento` FOREIGN KEY (`fk_id_nivel_estudio_reclutamiento`) REFERENCES `formacion_academica` (`pk_id_formacion_academica`) ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_puesto_reclutamiento` FOREIGN KEY (`fk_id_puesto_reclutamiento`) REFERENCES `puesto` (`pk_id_puesto`) ON UPDATE CASCADE;
@@ -3130,6 +3211,7 @@ ALTER TABLE `telefono_proveedor`
 --
 ALTER TABLE `transaccion`
   ADD CONSTRAINT `fk_encabezado_transaccion_numero_cuenta` FOREIGN KEY (`fk_id_numero_cuenta_bancaria`) REFERENCES `cuenta_bancaria` (`pk_id_numero_cuenta_bancaria`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_transaccion_id_tipo_moneda` FOREIGN KEY (`fk_id_tipo_moneda`) REFERENCES `tipo_moneda` (`pk_id_tipo_moneda`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_transaccion_tipo_transaccion` FOREIGN KEY (`fk_id_tipo_transaccion`) REFERENCES `tipo_transaccion` (`pk_id_tipo_transaccion`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
