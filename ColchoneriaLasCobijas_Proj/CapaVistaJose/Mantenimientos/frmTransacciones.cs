@@ -180,14 +180,15 @@ namespace CapaVistaJose.Mantenimientos
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            int OpcionTransaccion = Int32.Parse(cmbCodigoTransaccion.SelectedItem.ToString());
+           
             //Este if verifica que no se deje ningun campo en blanco, si hay uno en blando muestra el mensaje de que se necesitan llenar los campos
             if (txtDescripcion.Text == "" || txtMonto.Text == "" || cmbCodigoCuenta.SelectedItem == null || cmbTransaccion.SelectedItem == null || cmbMoneda.SelectedItem == null)
             {
                 MessageBox.Show("NO DEBE DEJAR CAMPOS VACIOS", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
-            { 
+            {
+                int OpcionTransaccion = Int32.Parse(cmbCodigoTransaccion.SelectedItem.ToString());
                 try
                 {
                     float.Parse(txtMonto.Text.ToString());
@@ -292,6 +293,21 @@ namespace CapaVistaJose.Mantenimientos
         private void cmbCodigoTransaccion_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("¿Esta Seguro de cancelar la transaccion?", "Advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+            if (dialogResult == DialogResult.OK)
+            {
+                procLimpiar();
+                CargarCombos();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "AyudaFRM/AyudaFRM.chm", "Transacciones.html");
         }
 
         private void txtDescripcion_KeyPress(object sender, KeyPressEventArgs e)

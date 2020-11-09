@@ -44,5 +44,10 @@ namespace CapaVistaJose.Mantenimientos
             para presentarlos en el DataGridView*/
             CargarDatos();
         }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "AyudaFRM/AyudaFRM.chm", "Disponibilidad.html");
+        }
     }
 }

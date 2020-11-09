@@ -143,9 +143,16 @@ namespace CapaVistaJose.Mantenimientos
             //el dataGridView1 se debe cambiar por el que se tiene en el formulario
             navegador1.DatosActualizar = dgvDatos;
             navegador1.procActualizarData();
-            navegador1.procCargar();
+            try
+            {
+                navegador1.procCargar();
+            }
+            catch (Exception ex)
+            {
+
+            }
             //en la variable ayuda ruta debe colocar la carpeta y el archivo.chm de su proyecto de ayuda
-            navegador1.ayudaRuta = "AyudaBancos/AyudaBancos.chm";
+            navegador1.ayudaRuta = "AyudaFRM/AyudaFRM.chm";
             navegador1.ruta = "Cuenta.html";
         }
 

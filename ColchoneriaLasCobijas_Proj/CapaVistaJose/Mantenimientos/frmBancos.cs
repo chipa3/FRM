@@ -90,7 +90,7 @@ namespace CapaVistaJose.Mantenimientos
             navegador1.DatosActualizar = dgvDatos;
             navegador1.procActualizarData();
             navegador1.procCargar();
-            navegador1.ayudaRuta = "AyudaBancos/AyudaBancos.chm";
+            navegador1.ayudaRuta = "AyudaFRM/AyudaFRM.chm";
             navegador1.ruta = "Bancos.html";
         }
 

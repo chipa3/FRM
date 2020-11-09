@@ -49,6 +49,8 @@
             this.lblSaldoActual = new System.Windows.Forms.Label();
             this.txtSaldoActual = new System.Windows.Forms.TextBox();
             this.tltAyuda = new System.Windows.Forms.ToolTip(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +59,7 @@
             this.btnGuardar.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Location = new System.Drawing.Point(24, 434);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(259, 74);
+            this.btnGuardar.Size = new System.Drawing.Size(212, 56);
             this.btnGuardar.TabIndex = 34;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -233,7 +235,7 @@
             // 
             this.lblSaldoActual.AutoSize = true;
             this.lblSaldoActual.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSaldoActual.Location = new System.Drawing.Point(329, 454);
+            this.lblSaldoActual.Location = new System.Drawing.Point(778, 455);
             this.lblSaldoActual.Name = "lblSaldoActual";
             this.lblSaldoActual.Size = new System.Drawing.Size(106, 20);
             this.lblSaldoActual.TabIndex = 37;
@@ -243,10 +245,32 @@
             // 
             this.txtSaldoActual.Enabled = false;
             this.txtSaldoActual.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSaldoActual.Location = new System.Drawing.Point(474, 451);
+            this.txtSaldoActual.Location = new System.Drawing.Point(890, 448);
             this.txtSaldoActual.Name = "txtSaldoActual";
             this.txtSaldoActual.Size = new System.Drawing.Size(249, 27);
             this.txtSaldoActual.TabIndex = 38;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::CapaVistaJose.Properties.Resources.Ayuda;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(1256, 18);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(59, 52);
+            this.button1.TabIndex = 39;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Location = new System.Drawing.Point(288, 434);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(212, 56);
+            this.btnCancelar.TabIndex = 40;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // frmTransacciones
             // 
@@ -254,6 +278,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gold;
             this.ClientSize = new System.Drawing.Size(1339, 516);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtSaldoActual);
             this.Controls.Add(this.lblSaldoActual);
             this.Controls.Add(this.cmbCodigoMoneda);
@@ -305,5 +331,7 @@
         private System.Windows.Forms.Label lblSaldoActual;
         private System.Windows.Forms.TextBox txtSaldoActual;
         private System.Windows.Forms.ToolTip tltAyuda;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

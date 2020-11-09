@@ -61,9 +61,16 @@ namespace CapaVistaJose.Mantenimientos
             navegador1.formulario = this;
             navegador1.DatosActualizar = dgvDatos;
             navegador1.procActualizarData();
-            navegador1.procCargar();
-            navegador1.ayudaRuta = "AyudaBancos/AyudaBancos.chm";
-            navegador1.ruta = "Bancos.html";
+            try
+            {
+                navegador1.procCargar();
+            }
+            catch(Exception ex)
+            {
+
+            }
+            navegador1.ayudaRuta = "AyudaFRM/AyudaFRM.chm";
+            navegador1.ruta = "Peticion.html";
         }
 
         private void txtEstado_TextChanged(object sender, EventArgs e)

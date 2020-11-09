@@ -97,8 +97,7 @@ namespace CapaVistaJose.Mantenimientos
             navegador1.procActualizarData();
             navegador1.procCargar();
             //en la variable ayuda ruta debe colocar la carpeta y el archivo.chm de su proyecto de ayuda
-            navegador1.ayudaRuta = "AyudaBancos/AyudaBancos.chm";
-            //en ruta debe colocar la pagina html que quiere que se muestre cuendo se presione el boton ayuda
+            navegador1.ayudaRuta = "AyudaFRM/AyudaFRM.chm";
             navegador1.ruta = "Propietario.html";
 
         }
